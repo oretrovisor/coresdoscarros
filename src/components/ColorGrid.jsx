@@ -1,0 +1,48 @@
+function ColorCard({ color, selected, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      data-selected={selected}
+      className="color-card text-left w-full border border-rule rounded-lg px-3 py-2.5 sm:px-3.5 sm:py-3 flex items-center gap-3 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-black/15"
+      style={{ background: 'var(--surface-soft)' }}
+    >
+      <span
+        aria-hidden="true"
+        className="swatch-ring shrink-0 w-9 h-9 rounded-md"
+        style={{ background: color.hex }}
+      />
+      <span className="min-w-0 flex-1">
+        <span className="block text-[14.5px] font-medium leading-snug" style={{ color: 'var(--ink)' }}>
+          {color.name}
+        </span>
+      </span>
+    </button>
+  );
+}
+
+export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
+  return (
+    <section>
+      <div className="flex items-baseline justify-between mb-3">
+        <h2 className="text-lg sm:text-xl tracking-tight font-medium" style={{ color: 'var(--ink)' }}>
+          Paleta de{' '}
+          <span className="text-[15px] sm:text-base align-baseline">{year}</span>
+        </h2>
+        <span className="font-mono text-[11px] tracking-wider uppercase" style={{ color: 'var(--muted)' }}>
+          {colors.length} cores
+        </span>
+      </div>
+      <div className="grid grid-cols-1 gap-2.5">
+        {colors.map((c, i) => (
+          <ColorCard
+            key={c.name + i}
+            color={c}
+            selected={i === selectedIndex}
+            onClick={() => onSelect(i)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
