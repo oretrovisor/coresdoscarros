@@ -8,10 +8,10 @@
   --ink: #222222;
   --rule: #DDDDDD;
   --muted: #777777;
-  --accent: #1F7F78;
-  --accent-dark: #186761;
+  --accent: #1c7870;
+  --accent-dark: #17615b;
   --accent-light: #FFE8A8;
-  --surface-soft: #FAFAF7;
+  --surface-soft: #FAFAFA;
 }
 
 html, body {
@@ -54,9 +54,9 @@ html, body {
 
 /* Year pill active state */
 .year-pill[data-active='true'] {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
 }
 .year-pill[data-active='true']:hover {
   background: var(--accent-dark) !important;
@@ -69,12 +69,12 @@ html, body {
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 .color-card:hover {
-  background-color: #f6f6f3;
-  border-color: #c8c8c4;
+  background-color: #F2F2F2;
+  border-color: #C9C9C9;
 }
 .color-card[data-selected='true'] {
-  background-color: #FFF6D6;
-  border-color: #e7d28a;
+  background-color: #EFEFEF;
+  border-color: #C9C9C9;
 }
 
 /* Native select reset */
@@ -89,7 +89,7 @@ html, body {
 
 /* Provisional data callout */
 .callout {
-  background-color: #FFF6D6;
-  border: 1px solid #e7d28a;
-  color: #6b5a16;
+  background-color: #F2F2F2;
+  border: 1px solid #DDDDDD;
+  color: #555555;
 }

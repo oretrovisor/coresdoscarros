@@ -13,13 +13,13 @@ export default {
       },
       colors: {
         brand: {
-          DEFAULT: '#1F7F78',
-          dark: '#186761',
+          DEFAULT: '#1c7870',
+          dark: '#17615b',
           light: '#FFE8A8',
         },
         ink: '#222222',
         paper: '#FFFFFF',
-        surface: '#FAFAF7',
+        surface: '#FAFAFA',
         rule: '#DDDDDD',
         muted: '#777777',
       },

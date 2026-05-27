@@ -84,8 +84,9 @@ export default function DetailCard({ color, year }) {
           borderBottom: '1px solid var(--rule)',
         }}
       >
-        <div className="font-mono text-[10.5px] tracking-[0.22em] uppercase mb-2 opacity-75">
-          Cor selecionada · {year}
+        <div className="font-mono text-[10.5px] tracking-[0.22em] uppercase mb-2 opacity-75 flex items-center justify-between">
+          <span>Cor selecionada</span>
+          <span>{year}</span>
         </div>
         <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium">
           {color.name}

@@ -12,7 +12,7 @@ export default function Header() {
         </div>
         <button
           type="button"
-          className="font-mono text-[11px] sm:text-[12px] tracking-[0.18em] uppercase rounded-full px-4 py-2 transition-colors border border-rule bg-white hover:bg-[#f6f6f3]"
+          className="font-mono text-[11px] sm:text-[12px] tracking-[0.18em] uppercase rounded-full px-4 py-2 transition-colors border border-rule bg-white hover:bg-[#F2F2F2]"
           style={{ color: 'var(--ink)' }}
         >
           Contato

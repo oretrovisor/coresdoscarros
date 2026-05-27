@@ -55,7 +55,7 @@ export default function Selectors({ brand, setBrand, year, setYear }) {
                 type="button"
                 onClick={() => setYear(y)}
                 data-active={y === year}
-                className="year-pill font-mono text-[12.5px] tracking-wide border border-rule rounded-md px-2.5 py-1.5 bg-white hover:bg-[#f6f6f3] transition-colors"
+                className="year-pill font-mono text-[12.5px] tracking-wide border border-rule rounded-md px-2.5 py-1.5 bg-white hover:bg-[#F2F2F2] transition-colors"
                 style={{ color: 'var(--ink)' }}
               >
                 {y}
