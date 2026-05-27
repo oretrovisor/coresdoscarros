@@ -1,3 +1,5 @@
+import UnconfirmedBadge from './UnconfirmedBadge';
+
 function ColorCard({ color, selected, onClick }) {
   return (
     <button
@@ -13,8 +15,14 @@ function ColorCard({ color, selected, onClick }) {
         style={{ background: color.hex }}
       />
       <span className="min-w-0 flex-1">
-        <span className="block text-[14.5px] font-medium leading-snug" style={{ color: 'var(--ink)' }}>
-          {color.name}
+        <span className="flex items-center gap-1.5">
+          <span className="text-[14.5px] font-medium leading-snug" style={{ color: 'var(--ink)' }}>
+            {color.name}
+          </span>
+          {color.unconfirmed && <UnconfirmedBadge style={{ color: 'var(--muted)' }} />}
+        </span>
+        <span className="block font-mono text-[10.5px] tracking-wider mt-0.5" style={{ color: 'var(--muted)' }}>
+          {color.code}
         </span>
       </span>
     </button>
