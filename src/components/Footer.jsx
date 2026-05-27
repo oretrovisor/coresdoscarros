@@ -7,7 +7,7 @@ export default function Footer() {
           <span
             aria-hidden="true"
             className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
-            style={{ background: '#DDDDDD', color: '#555555' }}
+            style={{ background: '#e7d28a', color: '#6b5a16' }}
           >
             i
           </span>

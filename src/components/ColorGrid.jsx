@@ -26,8 +26,7 @@ export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
     <section>
       <div className="flex items-baseline justify-between mb-3">
         <h2 className="text-lg sm:text-xl tracking-tight font-medium" style={{ color: 'var(--ink)' }}>
-          Cores para{' '}
-          <span className="font-semibold" style={{ color: 'var(--accent)' }}>{year}</span>
+          Linha {year}
         </h2>
         <span className="font-mono text-[11px] tracking-wider uppercase" style={{ color: 'var(--muted)' }}>
           {colors.length} cores
