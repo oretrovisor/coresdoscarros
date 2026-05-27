@@ -7,44 +7,44 @@
 export const DATA = {
   1970: [
     { code: "BEY6", name: "AMARELO CARAJÁ",        hex: "#E0A82E" },
-    { code: "BEA5", name: "AZUL ABAETÉ MET.",      hex: "#2E4A6B" },
-    { code: "BEA9", name: "AZUL PROFUNDO MET.",    hex: "#1E3050" },
+    { code: "BEA5", name: "AZUL ABAETÉ Metálico",  hex: "#2E4A6B" },
+    { code: "BEA9", name: "AZUL PROFUNDO Metálico", hex: "#1E3050" },
     { code: "BEW2", name: "BRANCO POLAR",          hex: "#F3EFE6" },
     { code: "BEP9", name: "PRETO FORMAL",          hex: "#1A1A1A" },
     { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#2F4A35" },
   ],
   1971: [
-    { code: "BGY5",    name: "AMARELO BOREAL",     hex: "#E8B842" },
-    { code: "BGY6",    name: "AMARELO CARAJÁ",     hex: "#E0A82E" },
-    { code: "BGA5",    name: "AZUL ABAETÉ MET.",   hex: "#2E4A6B" },
-    { code: "BGA9",    name: "AZUL PROFUNDO MET.", hex: "#1E3050" },
-    { code: "BGW2/W3", name: "BRANCO POLAR",       hex: "#F3EFE6" },
-    { code: "BGC5",    name: "CINZA BARILOCHE",    hex: "#9A9A95" },
-    { code: "BGV6",    name: "OLIVA D'OIRO",       hex: "#7A6E2A" },
-    { code: "BGY7",    name: "OURO ESPANHOL",      hex: "#C8962E" },
-    { code: "BGP9",    name: "PRETO FORMAL",       hex: "#1A1A1A" },
-    { code: "BGV3",    name: "VERDE FRONTEIRA",    hex: "#3A5A3A" },
-    { code: "BGV7",    name: "VERDE IMPERIAL",     hex: "#2F4A35" },
-    { code: "BGV4",    name: "VERDE MINUANO",      hex: "#4A6B45" },
-    { code: "BGV2",    name: "VERDE TROPICAL",     hex: "#2D6A4A" },
-    { code: "BGR4",    name: "VERMELHO ETRUSCO",   hex: "#8C1E22" },
-    { code: "BGR6",    name: "VERMELHO XAVANTE",   hex: "#7A1D2A" },
+    { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#E8B842" },
+    { code: "BGY6",    name: "AMARELO CARAJÁ",          hex: "#E0A82E" },
+    { code: "BGA5",    name: "AZUL ABAETÉ Metálico",    hex: "#2E4A6B" },
+    { code: "BGA9",    name: "AZUL PROFUNDO Metálico",  hex: "#1E3050" },
+    { code: "BGW2/W3", name: "BRANCO POLAR",            hex: "#F3EFE6" },
+    { code: "BGC5",    name: "CINZA BARILOCHE",         hex: "#9A9A95" },
+    { code: "BGV6",    name: "OLIVA D'OIRO",            hex: "#7A6E2A" },
+    { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E" },
+    { code: "BGP9",    name: "PRETO FORMAL",            hex: "#1A1A1A" },
+    { code: "BGV3",    name: "VERDE FRONTEIRA",         hex: "#3A5A3A" },
+    { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#2F4A35" },
+    { code: "BGV4",    name: "VERDE MINUANO",           hex: "#4A6B45" },
+    { code: "BGV2",    name: "VERDE TROPICAL",          hex: "#2D6A4A" },
+    { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#8C1E22" },
+    { code: "BGR6",    name: "VERMELHO XAVANTE",        hex: "#7A1D2A" },
   ],
   1972: [
     { code: "Y5",  name: "AMARELO BOREAL",            hex: "#E8B842" },
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
-    { code: "A5",  name: "AZUL ABAETÉ MET.",          hex: "#2E4A6B" },
-    { code: "A7",  name: "AZUL NAUTICO MET.",         hex: "#2A5278" },
+    { code: "A5",  name: "AZUL ABAETÉ Metálico",      hex: "#2E4A6B" },
+    { code: "A7",  name: "AZUL NAUTICO Metálico",     hex: "#2A5278" },
     { code: "W3",  name: "BRANCO POLAR",              hex: "#F3EFE6" },
-    { code: "R8",  name: "BURGUNDY MET.",             hex: "#5E1A2A" },
-    { code: "C4A", name: "CINZA FENIX MET.",          hex: "#8E8E8A" },
-    { code: "R5",  name: "MARROM CASTANHA MET.",      hex: "#5A3A26" },
+    { code: "R8",  name: "BURGUNDY Metálico",         hex: "#5E1A2A" },
+    { code: "C4A", name: "CINZA FENIX Metálico",      hex: "#8E8E8A" },
+    { code: "R5",  name: "MARROM CASTANHA Metálico",  hex: "#5A3A26" },
     { code: "M4",  name: "MARROM CLARO AZTECA",       hex: "#8A6A4A" },
     { code: "Y7",  name: "OURO ESPANHOL",             hex: "#C8962E" },
     { code: "P9",  name: "PRETO FORMAL",              hex: "#1A1A1A" },
     { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E" },
     { code: "V3",  name: "VERDE FRONTEIRA",           hex: "#3A5A3A" },
-    { code: "V7",  name: "VERDE IGARAPÉ MET.",        hex: "#3F6B4A" },
+    { code: "V7",  name: "VERDE IGARAPÉ Metálico",    hex: "#3F6B4A" },
     { code: "V4",  name: "VERDE MINUANO",             hex: "#4A6B45" },
     { code: "V2",  name: "VERDE TROPICAL",            hex: "#2D6A4A" },
     { code: "R4",  name: "VERMELHO ETRUSCO",          hex: "#8C1E22" },
@@ -172,11 +172,20 @@ for (const y of Object.keys(DATA)) {
 
 export const YEARS = Object.keys(DATA).map(Number).sort((a, b) => a - b);
 
-// Placeholder car models — replace per color when real archival data is available.
-export const MODELS_DEFAULT = [
-  "Dodge Dart",
-  "Dodge Charger",
-  "Dodge Le Baron",
-  "Dodge Magnum",
-  "Dodge Polara",
+// Car models with their production-year ranges.
+export const MODELS = [
+  { name: "1800",        from: 1973, to: 1975 },
+  { name: "Polara",      from: 1976, to: 1981 },
+  { name: "Charger",     from: 1971, to: 1981 },
+  { name: "Charger R/T", from: 1971, to: 1981 },
+  { name: "Dakota",      from: 1998, to: 2002 },
+  { name: "Dart Sedã",   from: 1970, to: 1981 },
+  { name: "Dart Coupé",  from: 1970, to: 1981 },
+  { name: "LeBaron",     from: 1979, to: 1980 },
+  { name: "Magnum",      from: 1979, to: 1981 },
 ];
+
+// Models available in a given year, in the canonical list order.
+export function modelsForYear(year) {
+  return MODELS.filter((m) => year >= m.from && year <= m.to).map((m) => m.name);
+}

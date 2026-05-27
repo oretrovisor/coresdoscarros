@@ -1,10 +1,9 @@
 export default function UnconfirmedBadge({ className = '', style = {} }) {
   return (
     <span
-      title="Não confirmado"
-      aria-label="Não confirmado"
       role="img"
-      className={`inline-flex items-center justify-center w-4 h-4 rounded-full border cursor-help align-middle ${className}`}
+      aria-label="Não confirmado"
+      className={`uc-badge inline-flex items-center justify-center w-4 h-4 rounded-full border cursor-help align-middle ${className}`}
       style={{
         borderColor: 'currentColor',
         fontSize: '10px',
@@ -15,6 +14,7 @@ export default function UnconfirmedBadge({ className = '', style = {} }) {
       }}
     >
       ?
+      <span className="uc-tooltip" role="tooltip">Não confirmado</span>
     </span>
   );
 }

@@ -1,4 +1,4 @@
-import { MODELS_DEFAULT } from '../data';
+import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 
 function isLight(hex) {
@@ -69,6 +69,7 @@ export default function DetailCard({ color, year }) {
   }
 
   const light = isLight(color.hex);
+  const models = modelsForYear(year);
 
   return (
     <article
@@ -104,7 +105,7 @@ export default function DetailCard({ color, year }) {
               Modelos que usavam esta cor
             </h4>
             <ul className="divide-y divide-rule border-t border-b border-rule">
-              {MODELS_DEFAULT.map((m) => (
+              {models.map((m) => (
                 <li key={m} className="py-2.5">
                   <span className="text-[15px]" style={{ color: 'var(--ink)' }}>{m}</span>
                 </li>
