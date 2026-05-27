@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cores dos Carros</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Luxurious+Script&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* O Retrovisor brand palette */
+    --paper: #FFFFFF;
+    --ink: #222222;
+    --rule: #DDDDDD;
+    --muted: #777777;
+    --accent: #1F7F78;
+    --accent-light: #FFE8A8;
+    --surface-soft: #FAFAF7;
+  }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .font-display { font-family: 'Inter', system-ui, sans-serif; }
+  .font-script { font-family: 'Luxurious Script', cursive; }
+  .brand-title {
+    font-family: 'Luxurious Script', cursive;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+  .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .rule { border-color: var(--rule); }
+  .muted { color: var(--muted); }
+  .swatch-ring { box-shadow: inset 0 0 0 1px rgba(0,0,0,0.14); }
+  /* Subtle stripe for placeholder media */
+  .stripes {
+    background-image: repeating-linear-gradient(
+      135deg,
+      rgba(26,26,23,0.04) 0 6px,
+      transparent 6px 12px
+    );
+  }
+  /* fade-in for detail */
+  .fade-in { animation: fadeIn 220ms ease-out both; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: none; }
+  }
+  /* year pill active underline */
+  .year-pill[data-active="true"] {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  /* keep active pill readable on hover — darken teal instead of going white */
+  .year-pill[data-active="true"]:hover {
+    background: #186761 !important;
+    border-color: #186761 !important;
+    color: #fff !important;
+  }
+  /* color card hover */
+  .color-card { transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease; }
+  .color-card:hover { background-color: #f6f6f3; border-color: #c8c8c4; }
+  .color-card[data-selected="true"] {
+    background-color: #FFF6D6;
+    border-color: #e7d28a;
+  }
+  /* select reset */
+  select.archival {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='none' stroke='%23222222' stroke-width='1.4' d='M1 1l4 4 4-4'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    padding-right: 2.25rem;
+    background-color: #FFFFFF;
+  }
+  .accent { color: var(--accent); }
+  .bg-paper-soft { background-color: var(--surface-soft); }
+  /* Footer logo treatment — keep in brand color */
+  .footer-logo {
+    height: 26px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  /* Callout above footer */
+  .callout {
+    background-color: #FFF6D6;
+    border: 1px solid #e7d28a;
+    color: #6b5a16;
+  }
+</style>
+</head>
+<body class="min-h-screen">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" data-presets="env,react">
+const { useState, useMemo, useEffect, useRef } = React;
+
+/* ---------- Data ---------- */
+// Each color: { name, hex }
+// Hex values are educated placeholders meant to feel period-correct;
+// they are not authoritative and can be corrected with real archival data.
+const DATA = {
+  1970: [
+    { name: "Amarelo Montego",     hex: "#e8b842" },
+    { name: "Branco Polar",        hex: "#f3efe6" },
+    { name: "Azul Atlântico",      hex: "#2e4a6b" },
+    { name: "Verde Colonial",      hex: "#3f5a3a" },
+    { name: "Vermelho Imperial",   hex: "#8c1e22" },
+  ],
+  1971: [
+    { name: "Amarelo Canário",     hex: "#f0c93a" },
+    { name: "Branco Neve",         hex: "#f5f2eb" },
+    { name: "Azul Turquesa",       hex: "#3a8a8e" },
+    { name: "Verde Amazonas",      hex: "#356b48" },
+    { name: "Vermelho Granada",    hex: "#7a1d2a" },
+  ],
+  1972: [
+    { name: "Bege Saara",          hex: "#cdb88a" },
+    { name: "Branco Clássico",     hex: "#efeae0" },
+    { name: "Azul Mediterrâneo",   hex: "#34597d" },
+    { name: "Verde Oliva",         hex: "#6b6e3a" },
+    { name: "Marrom Café",         hex: "#5a3a26" },
+  ],
+  1973: [
+    { name: "Amarelo Ouro",        hex: "#d6a330" },
+    { name: "Branco Pérola",       hex: "#efece4" },
+    { name: "Azul Noturno",        hex: "#1f2f50" },
+    { name: "Verde Musgo",         hex: "#4a5a35" },
+    { name: "Vermelho Rubi",       hex: "#7d1c2e" },
+  ],
+  1974: [
+    { name: "Laranja Caribe",      hex: "#d96a2b" },
+    { name: "Branco Ártico",       hex: "#f1ede4" },
+    { name: "Azul Capri",          hex: "#3a6f95" },
+    { name: "Verde Esmeralda",     hex: "#2d6a4a" },
+    { name: "Marrom Terra",        hex: "#6a4527" },
+  ],
+  1975: [
+    { name: "Amarelo Solar",       hex: "#e6b32a" },
+    { name: "Branco Aspen",        hex: "#efebe1" },
+    { name: "Azul Índigo",         hex: "#2a3a6b" },
+    { name: "Verde Floresta",      hex: "#2f4a32" },
+    { name: "Vermelho Fogo",       hex: "#9a2418" },
+  ],
+  1976: [
+    { name: "Bege Champanhe",      hex: "#d7c39a" },
+    { name: "Branco Cristal",      hex: "#f3efe7" },
+    { name: "Azul Imperial",       hex: "#26416e" },
+    { name: "Verde Limão",         hex: "#a4b04a" },
+    { name: "Marrom Bronze",       hex: "#8a5a2a" },
+  ],
+  1977: [
+    { name: "Amarelo Mostarda",    hex: "#caa12a" },
+    { name: "Branco Antigo",       hex: "#ece6d6" },
+    { name: "Azul Safira",         hex: "#2c4a78" },
+    { name: "Verde Caribe",        hex: "#3a8a6b" },
+    { name: "Vermelho Cereja",     hex: "#8d1c28" },
+  ],
+  1978: [
+    { name: "Dourado Metálico",    hex: "#b89545" },
+    { name: "Branco Nevada",       hex: "#efebe2" },
+    { name: "Azul Petróleo",       hex: "#244a52" },
+    { name: "Verde Jade",          hex: "#3f7560" },
+    { name: "Marrom Mogno",        hex: "#5a2e22" },
+  ],
+  1979: [
+    { name: "Prata Lunar",         hex: "#b8b5ad" },
+    { name: "Branco Geada",        hex: "#f0ede5" },
+    { name: "Azul Royal",          hex: "#243a78" },
+    { name: "Verde Pistache",      hex: "#aabd7a" },
+    { name: "Vermelho Carmim",     hex: "#8a1a2c" },
+  ],
+  1980: [
+    { name: "Cinza Prata",         hex: "#a8a59d" },
+    { name: "Branco Luxo",         hex: "#f1ede4" },
+    { name: "Azul Celeste",        hex: "#6e95b8" },
+    { name: "Verde Acqua",         hex: "#7ab0a4" },
+    { name: "Marrom Tabaco",       hex: "#6a4628" },
+  ],
+  1981: [
+    { name: "Amarelo Champagne",   hex: "#d8be6b" },
+    { name: "Branco Diamante",     hex: "#f2efe7" },
+    { name: "Azul Oceano",         hex: "#2a557a" },
+    { name: "Verde Brasília",      hex: "#356b3a" },
+    { name: "Vermelho Vinho",      hex: "#5e1a26" },
+  ],
+};
+
+const MODELS_BY_DEFAULT = [
+  "Dodge Dart",
+  "Dodge Charger",
+  "Dodge Le Baron",
+  "Dodge Magnum",
+  "Dodge Polara",
+];
+
+const YEARS = Object.keys(DATA).map(Number).sort((a,b)=>a-b);
+
+/* ---------- Helpers ---------- */
+function isLight(hex) {
+  const h = hex.replace('#','');
+  const r = parseInt(h.substring(0,2),16);
+  const g = parseInt(h.substring(2,4),16);
+  const b = parseInt(h.substring(4,6),16);
+  // relative luminance
+  const L = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+  return L > 0.72;
+}
+
+/* ---------- Components ---------- */
+
+function TopStrip() {
+  return (
+    <div className="border-b rule" style={{background:'#FAFAF7'}}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-2 flex items-center justify-center gap-2">
+        <span className="font-mono text-[10.5px] tracking-[0.22em] uppercase" style={{color:'var(--muted)'}}>
+          Um projeto de
+        </span>
+        <a
+          href="https://oretrovisor.com/"
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center hover:opacity-80 transition-opacity"
+          aria-label="O Retrovisor"
+        >
+          <img
+            src="https://oretrovisor.com/wp-content/uploads/2015/01/oretrovisor-logo-500px.png"
+            alt="O Retrovisor"
+            style={{height:'22px', width:'auto', display:'block'}}
+          />
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function Logo({ size = 34 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 36 36"
+      aria-hidden="true"
+      style={{display:'block', flexShrink:0}}
+    >
+      <rect x="0.7" y="0.7" width="34.6" height="34.6" rx="6" fill="#ffffff" stroke="#222222" strokeWidth="1.4" />
+      <rect x="5"   y="6"   width="26" height="6" rx="1.5" fill="#1F7F78" />
+      <rect x="5"   y="15"  width="26" height="6" rx="1.5" fill="#222222" />
+      <rect x="5"   y="24"  width="26" height="6" rx="1.5" fill="#FFE8A8" stroke="#e7d28a" strokeWidth="0.6" />
+    </svg>
+  );
+}
+
+function Header() {
+  return (
+    <header className="border-b rule">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-7 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <Logo size={34} />
+          <h1 className="brand-title text-[34px] sm:text-[44px] leading-none">
+            Cores dos Carros
+          </h1>
+        </div>
+        <button
+          type="button"
+          className="font-mono text-[11px] sm:text-[12px] tracking-[0.18em] uppercase rounded-full px-4 py-2 transition-colors border rule bg-white hover:bg-[#f6f6f3]"
+          style={{color:'var(--ink)'}}
+        >
+          Contato
+        </button>
+      </div>
+    </header>
+  );
+}
+
+function Selectors({ brand, setBrand, year, setYear }) {
+  return (
+    <section className="border-b rule">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5 sm:py-6 grid gap-5 sm:gap-8 sm:grid-cols-[1fr_2fr] items-start">
+        {/* Marca */}
+        <div>
+          <label htmlFor="marca" className="block font-mono text-[10.5px] tracking-[0.18em] muted uppercase mb-2">
+            Marca
+          </label>
+          <select
+            id="marca"
+            value={brand}
+            onChange={e => setBrand(e.target.value)}
+            className="archival w-full border rule rounded-md px-3.5 py-2.5 text-[15px] font-medium focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black/30"
+          >
+            <option>Chrysler do Brasil</option>
+          </select>
+        </div>
+
+        {/* Ano */}
+        <div>
+          <div className="mb-2">
+            <label className="font-mono text-[10.5px] tracking-[0.18em] muted uppercase">Ano</label>
+          </div>
+
+          {/* Mobile: native select */}
+          <select
+            value={year}
+            onChange={e => setYear(Number(e.target.value))}
+            className="archival sm:hidden w-full border rule rounded-md px-3.5 py-2.5 text-[15px] font-medium focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black/30"
+          >
+            {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
+          </select>
+
+          {/* Desktop: year pills */}
+          <div className="hidden sm:flex flex-wrap gap-1.5">
+            {YEARS.map(y => (
+              <button
+                key={y}
+                onClick={() => setYear(y)}
+                data-active={y === year}
+                className="year-pill font-mono text-[12.5px] tracking-wide border rule rounded-md px-2.5 py-1.5 bg-white hover:bg-[#f6f6f3] transition-colors"
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ColorCard({ color, selected, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      data-selected={selected}
+      className="color-card text-left w-full bg-paper-soft border rule rounded-lg px-3 py-2.5 sm:px-3.5 sm:py-3 flex items-center gap-3 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-black/15"
+    >
+      <span
+        aria-hidden="true"
+        className="swatch-ring shrink-0 w-9 h-9 sm:w-9 sm:h-9 rounded-md"
+        style={{ background: color.hex }}
+      ></span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-[14.5px] font-medium leading-snug">{color.name}</span>
+      </span>
+    </button>
+  );
+}
+
+function ColorGrid({ year, colors, selectedIndex, onSelect }) {
+  return (
+    <section>
+      <div className="flex items-baseline justify-between mb-3">
+        <h2 className="font-display text-lg sm:text-xl tracking-tight">
+          Paleta de <span className="text-[15px] sm:text-base align-baseline">{year}</span>
+        </h2>
+        <span className="font-mono text-[11px] muted tracking-wider uppercase">
+          {colors.length} cores
+        </span>
+      </div>
+      <div className="grid grid-cols-1 gap-2.5">
+        {colors.map((c, i) => (
+          <ColorCard
+            key={c.name + i}
+            color={c}
+            selected={i === selectedIndex}
+            onClick={() => onSelect(i)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PhotoPlaceholder({ label = "Foto do carro" }) {
+  return (
+    <div className="relative aspect-[4/3] w-full border rule rounded-md stripes bg-paper-soft overflow-hidden flex items-center justify-center">
+      <div className="flex flex-col items-center gap-2 text-center px-4">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="muted" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+          <circle cx="8.5" cy="10" r="1.4" stroke="currentColor" strokeWidth="1.4" />
+          <path d="M4 17l5-5 4 4 3-3 4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <div className="font-mono text-[11px] tracking-[0.18em] muted uppercase">{label}</div>
+        <div className="font-mono text-[10.5px] muted">a inserir</div>
+      </div>
+    </div>
+  );
+}
+
+function VideoPlaceholder({ label = "Vídeo do carro" }) {
+  return (
+    <div className="relative aspect-video w-full border rule rounded-md stripes bg-paper-soft overflow-hidden flex items-center justify-center">
+      <div className="flex flex-col items-center gap-2 text-center px-4">
+        <div className="w-12 h-12 rounded-full border rule bg-paper-soft flex items-center justify-center">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path d="M3 1.5v11l9-5.5z" fill="#222222" />
+          </svg>
+        </div>
+        <div className="font-mono text-[11px] tracking-[0.18em] muted uppercase">{label}</div>
+        <div className="font-mono text-[10.5px] muted">a inserir</div>
+      </div>
+    </div>
+  );
+}
+
+function DetailCard({ color, year }) {
+  if (!color) {
+    return (
+      <div className="border rule rounded-lg p-8 bg-paper-soft text-center">
+        <div className="font-mono text-[11px] tracking-[0.18em] muted uppercase mb-2">Detalhe</div>
+        <p className="text-[15px] muted">Selecione uma cor da paleta para ver os detalhes.</p>
+      </div>
+    );
+  }
+
+  const light = isLight(color.hex);
+
+  return (
+    <article key={color.name + year} className="fade-in border rule rounded-lg bg-paper-soft overflow-hidden">
+      {/* Big swatch header */}
+      <div
+        className="relative p-6 sm:p-7"
+        style={{
+          background: color.hex,
+          color: light ? '#222222' : '#FFFFFF',
+          borderBottom: '1px solid var(--rule)'
+        }}
+      >
+        <div>
+          <div
+            className="font-mono text-[10.5px] tracking-[0.22em] uppercase mb-2 opacity-75"
+          >
+            Cor selecionada · {year}
+          </div>
+          <h3 className="font-display text-2xl sm:text-3xl leading-tight tracking-tight">
+            {color.name}
+          </h3>
+        </div>
+      </div>
+
+      {/* Body */}
+      <div className="p-5 sm:p-7 grid gap-6 lg:grid-cols-2">
+        {/* Left: models + note */}
+        <div className="flex flex-col gap-6">
+          <section>
+            <h4 className="font-mono text-[11px] tracking-[0.18em] muted uppercase mb-3">
+              Modelos que usavam esta cor
+            </h4>
+            <ul className="divide-y rule border-t border-b rule">
+              {MODELS_BY_DEFAULT.map((m, i) => (
+                <li key={m} className="py-2.5">
+                  <span className="text-[15px]">{m}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <aside className="border-l-2 rule pl-3.5 py-1">
+            <div className="font-mono text-[10.5px] tracking-[0.18em] muted uppercase mb-1">
+              Nota
+            </div>
+            <p className="text-[14px] leading-relaxed">
+              Informações históricas a confirmar.
+            </p>
+          </aside>
+        </div>
+
+        {/* Right: photo + video */}
+        <div className="flex flex-col gap-4">
+          <PhotoPlaceholder />
+          <VideoPlaceholder />
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function Footer() {
+  return (
+    <>
+      {/* Callout sits above the footer */}
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12">
+        <div className="callout rounded-md px-4 py-3 flex items-start gap-3">
+          <span aria-hidden="true" className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold" style={{background:'#e7d28a', color:'#6b5a16'}}>i</span>
+          <p className="font-mono text-[11.5px] tracking-wide leading-relaxed">
+            Dados provisórios · sujeitos a revisão.
+          </p>
+        </div>
+      </div>
+
+      <footer className="border-t rule mt-6">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex items-center justify-between gap-4 flex-wrap">
+          <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{color:'var(--muted)'}}>
+            © 2026 Cores dos Carros
+          </div>
+          <a
+            href="https://oretrovisor.com/"
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
+            aria-label="O Retrovisor"
+          >
+            <span className="font-mono text-[10.5px] tracking-[0.22em] uppercase" style={{color:'var(--muted)'}}>
+              Um projeto de
+            </span>
+            <img
+              className="footer-logo"
+              src="https://oretrovisor.com/wp-content/uploads/2015/01/oretrovisor-logo-500px.png"
+              alt="O Retrovisor"
+            />
+          </a>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+/* ---------- App ---------- */
+function App() {
+  const [brand, setBrand] = useState("Chrysler do Brasil");
+  const [year, setYear] = useState(1970);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const colors = useMemo(() => DATA[year] || [], [year]);
+
+  // Reset selection when year changes
+  useEffect(() => {
+    setSelectedIndex(0);
+  }, [year]);
+
+  const selectedColor = colors[selectedIndex] || null;
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <TopStrip />
+      <Header />
+      <Selectors brand={brand} setBrand={setBrand} year={year} setYear={setYear} />
+
+      <main className="flex-1">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-7 sm:py-10 grid gap-8 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)]">
+          <ColorGrid
+            year={year}
+            colors={colors}
+            selectedIndex={selectedIndex}
+            onSelect={setSelectedIndex}
+          />
+          <DetailCard color={selectedColor} year={year} />
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
