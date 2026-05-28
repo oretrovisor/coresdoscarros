@@ -29,28 +29,6 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
   );
 }
 
-function VideoPlaceholder({ label = 'Vídeo do carro' }) {
-  return (
-    <div
-      className="relative w-full border border-rule rounded-md stripes overflow-hidden flex items-center justify-center"
-      style={{ aspectRatio: '16/9', background: 'var(--surface-soft)' }}
-    >
-      <div className="flex flex-col items-center gap-2 text-center px-4">
-        <div
-          className="w-12 h-12 rounded-full border border-rule flex items-center justify-center"
-          style={{ background: 'var(--surface-soft)' }}
-        >
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-            <path d="M3 1.5v11l9-5.5z" fill="#222222" />
-          </svg>
-        </div>
-        <div className="font-mono text-[11px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>{label}</div>
-        <div className="font-mono text-[10.5px]" style={{ color: 'var(--muted)' }}>a inserir</div>
-      </div>
-    </div>
-  );
-}
-
 function VideoEmbed({ id }) {
   return (
     <div
@@ -115,37 +93,46 @@ export default function DetailCard({ color, year }) {
       </div>
 
       {/* Body */}
-      <div className="p-5 sm:p-7 grid gap-6 lg:grid-cols-2">
-        {/* Left: models + note */}
-        <div className="flex flex-col gap-6">
-          <section>
-            <h4 className="font-mono text-[11px] tracking-[0.18em] uppercase mb-3" style={{ color: 'var(--muted)' }}>
-              Modelos que usavam esta cor
-            </h4>
-            <ul className="divide-y divide-rule border-t border-b border-rule">
-              {models.map((m) => (
-                <li key={m} className="py-2.5">
-                  <span className="text-[15px]" style={{ color: 'var(--ink)' }}>{m}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+      <div className="p-5 sm:p-7 flex flex-col gap-6">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Left: models + notes */}
+          <div className="flex flex-col gap-6">
+            <section>
+              <h4 className="font-mono text-[11px] tracking-[0.18em] uppercase mb-3" style={{ color: 'var(--muted)' }}>
+                Modelos que usavam esta cor
+              </h4>
+              <ul className="divide-y divide-rule border-t border-b border-rule">
+                {models.map((m) => (
+                  <li key={m} className="py-2.5">
+                    <span className="text-[15px]" style={{ color: 'var(--ink)' }}>{m}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-          <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
-            <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
-              Nota
-            </div>
-            <p className="text-[14px] leading-relaxed" style={{ color: 'var(--ink)' }}>
-              Informações históricas a confirmar.
-            </p>
-          </aside>
+            <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
+              <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
+                Notas
+              </div>
+              <p className="text-[14px] leading-relaxed mb-2" style={{ color: 'var(--ink)' }}>
+                Informações históricas a confirmar.
+              </p>
+              <p className="text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>
+                Fotos e vídeos retirados da internet para fins ilustrativos. As cores na tela não
+                condizem com a coloração real de um veículo, portanto não devem ser usados como fonte
+                para restaurações.
+              </p>
+            </aside>
+          </div>
+
+          {/* Right: photo */}
+          <div className="flex flex-col gap-4">
+            <PhotoPlaceholder />
+          </div>
         </div>
 
-        {/* Right: photo + video */}
-        <div className="flex flex-col gap-4">
-          <PhotoPlaceholder />
-          {color.video ? <VideoEmbed id={color.video} /> : <VideoPlaceholder />}
-        </div>
+        {/* Full-width video below the notes (only when present) */}
+        {color.video && <VideoEmbed id={color.video} />}
       </div>
     </article>
   );
