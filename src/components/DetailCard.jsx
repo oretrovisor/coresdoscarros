@@ -1,5 +1,6 @@
 import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
+import InfoBadge from './InfoBadge';
 
 function isLight(hex) {
   const h = hex.replace('#', '');
@@ -95,35 +96,20 @@ export default function DetailCard({ color, year }) {
       {/* Body */}
       <div className="p-5 sm:p-7 flex flex-col gap-6">
         <div className="grid gap-6 lg:grid-cols-2">
-          {/* Left: models + notes */}
-          <div className="flex flex-col gap-6">
-            <section>
-              <h4 className="font-mono text-[11px] tracking-[0.18em] uppercase mb-3" style={{ color: 'var(--muted)' }}>
-                Modelos que usavam esta cor
-              </h4>
-              <ul className="divide-y divide-rule border-t border-b border-rule">
-                {models.map((m) => (
-                  <li key={m} className="py-2.5">
-                    <span className="text-[15px]" style={{ color: 'var(--ink)' }}>{m}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
-              <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
-                Notas
-              </div>
-              <p className="text-[14px] leading-relaxed mb-2" style={{ color: 'var(--ink)' }}>
-                Informações históricas a confirmar.
-              </p>
-              <p className="text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Fotos e vídeos retirados da internet para fins ilustrativos. As cores na tela não
-                condizem com a coloração real de um veículo, portanto não devem ser usados como fonte
-                para restaurações.
-              </p>
-            </aside>
-          </div>
+          {/* Left: models */}
+          <section>
+            <h4 className="font-mono text-[11px] tracking-[0.18em] uppercase mb-3 flex items-center gap-1.5" style={{ color: 'var(--muted)' }}>
+              Modelos que usavam esta cor
+              <InfoBadge text="Informações não oficiais — podem conter imprecisões." />
+            </h4>
+            <ul className="divide-y divide-rule border-t border-b border-rule">
+              {models.map((m) => (
+                <li key={m} className="py-2.5">
+                  <span className="text-[15px]" style={{ color: 'var(--ink)' }}>{m}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
           {/* Right: photo */}
           <div className="flex flex-col gap-4">
@@ -131,8 +117,20 @@ export default function DetailCard({ color, year }) {
           </div>
         </div>
 
-        {/* Full-width video below the notes (only when present) */}
+        {/* Full-width video (only when present) */}
         {color.video && <VideoEmbed id={color.video} />}
+
+        {/* Notes below the video */}
+        <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
+          <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
+            Notas
+          </div>
+          <p className="text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>
+            Fotos e vídeos retirados da internet para fins ilustrativos. As cores na tela não
+            condizem com a coloração real de um veículo, portanto não devem ser usados como fonte
+            para restaurações.
+          </p>
+        </aside>
       </div>
     </article>
   );
