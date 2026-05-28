@@ -93,6 +93,17 @@ html, body {
   border: 1px solid #e7d28a;
   color: #6b5a16;
 }
+.callout-link {
+  color: #6b5a16;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 140ms ease;
+}
+.callout-link:hover {
+  color: #4d4010;
+}
 
 /* Unconfirmed badge tooltip — shows immediately on hover/focus */
 .uc-badge {

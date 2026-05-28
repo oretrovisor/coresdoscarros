@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       {/* Provisional data callout above footer */}
       <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12">
-        <div className="callout rounded-md px-4 py-3 flex items-start gap-3">
+        <div className="callout rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
             className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
@@ -11,9 +11,44 @@ export default function Footer() {
           >
             i
           </span>
-          <p className="font-mono text-[11.5px] tracking-wide leading-relaxed">
-            Dados provisórios · sujeitos a revisão.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="font-mono text-[11.5px] tracking-wide leading-relaxed">
+              Dados provisórios, ainda em revisão.
+            </p>
+            <p className="text-[12.5px] leading-relaxed">
+              As cores foram compiladas a partir de fontes na internet, principalmente a{' '}
+              <a
+                className="callout-link"
+                href="https://www.chryslerclube.com.br/frisinho-cores.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                tabela de cores do Chrysler Clube
+              </a>{' '}
+              e{' '}
+              <a
+                className="callout-link"
+                href="https://www.instagram.com/p/B-H9MvjACgl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                esta publicação no Instagram
+              </a>
+              .
+            </p>
+            <p className="text-[12.5px] leading-relaxed">
+              O projeto se inspira na{' '}
+              <a
+                className="callout-link"
+                href="https://www.youtube.com/@agbadolato/videos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                coleção do AGBadolato
+              </a>
+              , que faz um belíssimo trabalho de preservação da memória da indústria automobilística brasileira.
+            </p>
+          </div>
         </div>
       </div>
 
