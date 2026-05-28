@@ -87,7 +87,7 @@ export default function DetailCard({ color, year }) {
   }
 
   const light = isLight(color.hex);
-  const models = modelsForYear(year);
+  const models = color.models ?? modelsForYear(year);
 
   return (
     <article
