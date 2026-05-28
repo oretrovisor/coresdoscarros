@@ -1,8 +1,9 @@
 export default function Footer() {
   return (
     <>
-      {/* Provisional data callout above footer */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12">
+      {/* Callouts above the footer */}
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12 flex flex-col gap-3">
+        {/* Sources / provisional data */}
         <div className="callout rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
@@ -12,11 +13,11 @@ export default function Footer() {
             i
           </span>
           <div className="flex flex-col gap-2">
-            <p className="font-mono text-[11.5px] tracking-wide leading-relaxed">
+            <p className="text-[12.5px] font-medium leading-relaxed">
               Dados provisórios, ainda em revisão.
             </p>
             <p className="text-[12.5px] leading-relaxed">
-              As cores foram compiladas a partir de fontes na internet, principalmente a{' '}
+              As informações foram compiladas a partir de fontes na internet, principalmente a{' '}
               <a
                 className="callout-link"
                 href="https://www.chryslerclube.com.br/frisinho-cores.html"
@@ -32,23 +33,34 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                esta publicação no Instagram
+                esta publicação de @chryslerdobrasil no Instagram
               </a>
               .
             </p>
-            <p className="text-[12.5px] leading-relaxed">
-              O projeto se inspira na{' '}
-              <a
-                className="callout-link"
-                href="https://www.youtube.com/@agbadolato/videos"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                coleção do AGBadolato
-              </a>
-              , que faz um belíssimo trabalho de preservação da memória da indústria automobilística brasileira.
-            </p>
           </div>
+        </div>
+
+        {/* Thank-you / inspiration */}
+        <div className="callout-thanks rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
+          <span
+            aria-hidden="true"
+            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[12px] shrink-0"
+            style={{ background: '#D6E6E1', color: '#2E5A55' }}
+          >
+            {'♥︎'}
+          </span>
+          <p className="text-[12.5px] leading-relaxed">
+            O projeto se inspira na{' '}
+            <a
+              className="callout-thanks-link"
+              href="https://www.youtube.com/@agbadolato/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              coleção do AGBadolato
+            </a>
+            , que faz um belíssimo trabalho de preservação da memória da indústria automobilística brasileira.
+          </p>
         </div>
       </div>
 

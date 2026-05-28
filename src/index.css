@@ -105,6 +105,24 @@ html, body {
   color: #4d4010;
 }
 
+/* Thank-you callout — softer, calmer tone */
+.callout-thanks {
+  background-color: #EEF5F3;
+  border: 1px solid #D6E6E1;
+  color: #3A5F59;
+}
+.callout-thanks-link {
+  color: #2E5A55;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 140ms ease;
+}
+.callout-thanks-link:hover {
+  color: #1c7870;
+}
+
 /* Unconfirmed badge tooltip — shows immediately on hover/focus */
 .uc-badge {
   position: relative;
