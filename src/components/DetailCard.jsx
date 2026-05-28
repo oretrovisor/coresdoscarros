@@ -51,6 +51,24 @@ function VideoPlaceholder({ label = 'Vídeo do carro' }) {
   );
 }
 
+function VideoEmbed({ id }) {
+  return (
+    <div
+      className="relative w-full border border-rule rounded-md overflow-hidden"
+      style={{ aspectRatio: '16/9', background: '#000' }}
+    >
+      <iframe
+        className="absolute inset-0 w-full h-full"
+        src={`https://www.youtube-nocookie.com/embed/${id}`}
+        title="Vídeo do carro"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
 export default function DetailCard({ color, year }) {
   if (!color) {
     return (
@@ -126,7 +144,7 @@ export default function DetailCard({ color, year }) {
         {/* Right: photo + video */}
         <div className="flex flex-col gap-4">
           <PhotoPlaceholder />
-          <VideoPlaceholder />
+          {color.video ? <VideoEmbed id={color.video} /> : <VideoPlaceholder />}
         </div>
       </div>
     </article>

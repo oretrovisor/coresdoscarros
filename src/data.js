@@ -75,7 +75,7 @@ export const DATA = {
     { code: "T4",  name: "BRONZE CASTANHO BRILHANTE",    hex: "#7A5A2E" },
     { code: "A6B", name: "CINZA PLATINA",                hex: "#B8B5AD" },
     { code: "T9",  name: "MARROM CLÁSSICO",              hex: "#5A3A26" },
-    { code: "Y6A", name: "OCRE/AMARELO BARROCO",         hex: "#C8962E" },
+    { code: "Y6A", name: "OCRE/AMARELO BARROCO",         hex: "#C8962E", video: "MO1EZ6n-MPI" },
     { code: "P9A", name: "PRETO TURANDOT",               hex: "#1A1A1A" },
     { code: "G9",  name: "VERDE CORDOBA",                hex: "#3A5A3A" },
     { code: "G6",  name: "VERDE SILVESTRE",              hex: "#4A6B3A" },
