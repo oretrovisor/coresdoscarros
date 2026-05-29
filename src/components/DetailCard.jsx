@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 import InfoBadge from './InfoBadge';
@@ -31,6 +32,8 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
 }
 
 function PhotoEmbed({ src, alt }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return <PhotoPlaceholder />;
   return (
     <div
       className="relative w-full border border-rule rounded-md overflow-hidden"
@@ -40,6 +43,7 @@ function PhotoEmbed({ src, alt }) {
         src={src}
         alt={alt}
         loading="lazy"
+        onError={() => setFailed(true)}
         className="absolute inset-0 w-full h-full object-cover"
       />
     </div>
