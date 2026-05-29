@@ -1,6 +1,24 @@
 import UnconfirmedBadge from './UnconfirmedBadge';
 
+function PhotoIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <rect x="1" y="3" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
+      <circle cx="7" cy="7.5" r="2" stroke="currentColor" strokeWidth="1.2" />
+    </svg>
+  );
+}
+
+function VideoIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path d="M3.5 2.5v9l7.5-4.5z" fill="currentColor" />
+    </svg>
+  );
+}
+
 function ColorCard({ color, selected, onClick }) {
+  const hasMedia = color.photo || color.video;
   return (
     <button
       type="button"
@@ -25,6 +43,20 @@ function ColorCard({ color, selected, onClick }) {
           {color.code}
         </span>
       </span>
+      {hasMedia && (
+        <span className="shrink-0 flex items-center gap-1.5" style={{ color: 'var(--muted)' }}>
+          {color.photo && (
+            <span title="Tem foto" aria-label="Tem foto" className="inline-flex">
+              <PhotoIcon />
+            </span>
+          )}
+          {color.video && (
+            <span title="Tem vídeo" aria-label="Tem vídeo" className="inline-flex">
+              <VideoIcon />
+            </span>
+          )}
+        </span>
+      )}
     </button>
   );
 }
