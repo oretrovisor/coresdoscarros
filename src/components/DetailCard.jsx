@@ -126,9 +126,9 @@ export default function DetailCard({ color, year }) {
             Notas
           </div>
           <p className="text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>
-            Fotos e vídeos retirados da internet para fins ilustrativos. As cores na tela não
-            condizem com a coloração real de um veículo, portanto não devem ser usados como fonte
-            para restaurações.
+            Fotos e vídeos foram retirados da internet apenas para fins ilustrativos. As cores
+            exibidas na tela podem ser diferentes da coloração real do veículo, por isso não devem
+            ser usadas como referência para restaurações.
           </p>
         </aside>
       </div>
