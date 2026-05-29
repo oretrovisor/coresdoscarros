@@ -11,7 +11,7 @@ export const DATA = {
     { code: "BEA9", name: "AZUL PROFUNDO Metálico", hex: "#1E3050" },
     { code: "BEW2", name: "BRANCO POLAR",          hex: "#F3EFE6" },
     { code: "BEP9", name: "PRETO FORMAL",          hex: "#1A1A1A" },
-    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#2F4A35" },
+    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#2F4A35", video: "KtUNxnks-f8" },
   ],
   1971: [
     { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#E8B842", models: ["Charger R/T"] },
