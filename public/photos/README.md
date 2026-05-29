@@ -22,11 +22,29 @@ YEAR-model-paint-name.jpg
 
 ## Wiring it up
 
-After adding a photo here, set `photo: "<filename>"` on that color's entry in `src/data.js`:
+After adding a photo here, set `photo` **and** `photoCaption` on that color's entry in `src/data.js`:
 
 ```js
 { code: "BGY5", name: "AMARELO BOREAL", hex: "#DE5C1E",
-  photo: "1971-dodge-charger-rt-amarelo-boreal.jpg" },
+  photo: "1971-dodge-charger-rt-amarelo-boreal.jpg",
+  photoCaption: "1971 Dodge Charger R/T Amarelo Boreal" },
 ```
 
-The detail card resolves the file via Vite's `BASE_URL`, so it works in both dev and on GitHub Pages. If the file is missing or fails to load, the UI falls back to the "Foto do carro" placeholder automatically.
+### Caption format
+
+Captions appear small and italicized below the photo. Follow this template:
+
+```
+{year} {make} {model} {Paint Name in Title Case}
+```
+
+Examples:
+- `1971 Dodge Charger R/T Amarelo Boreal`
+- `1974 Dodge Dart Ocre/Amarelo Barroco`
+- `1972 Dodge Charger Marrom Castanha Metálico`
+
+The caption is also used as the image's `alt` text for accessibility, so write it as a natural description.
+
+### Fallback
+
+The detail card resolves the file via Vite's `BASE_URL`, so it works in dev and on GitHub Pages. If the file is missing or fails to load, the UI falls back to the "Foto do carro" placeholder automatically.

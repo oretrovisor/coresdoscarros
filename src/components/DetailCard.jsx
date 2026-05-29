@@ -31,22 +31,29 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
   );
 }
 
-function PhotoEmbed({ src, alt }) {
+function PhotoEmbed({ src, alt, caption }) {
   const [failed, setFailed] = useState(false);
   if (failed) return <PhotoPlaceholder />;
   return (
-    <div
-      className="relative w-full border border-rule rounded-md overflow-hidden"
-      style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
-    >
-      <img
-        src={src}
-        alt={alt}
-        loading="lazy"
-        onError={() => setFailed(true)}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-    </div>
+    <figure className="m-0">
+      <div
+        className="relative w-full border border-rule rounded-md overflow-hidden"
+        style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+      >
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          onError={() => setFailed(true)}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+      {caption && (
+        <figcaption className="mt-2 text-[11.5px] italic leading-snug" style={{ color: 'var(--muted)' }}>
+          {caption}
+        </figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -136,7 +143,8 @@ export default function DetailCard({ color, year }) {
             {color.photo ? (
               <PhotoEmbed
                 src={`${import.meta.env.BASE_URL}photos/${color.photo}`}
-                alt={`${color.name} — ${year}`}
+                alt={color.photoCaption || `${color.name} — ${year}`}
+                caption={color.photoCaption}
               />
             ) : (
               <PhotoPlaceholder />
