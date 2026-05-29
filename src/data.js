@@ -54,7 +54,7 @@ export const DATA = {
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
     { code: "A6A", name: "AZUL GUAÍBA",               hex: "#3A6F95" },
     { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4" },
-    { code: "C4A", name: "CINZA CLARO HIMALAIA",      hex: "#C2C2BC" },
+    { code: "C4A", name: "CINZA CLARO HIMALAIA",      hex: "#C2C2BC", video: "LVAB9Rt4kN8" },
     { code: "C7",  name: "CINZA ESCURO",              hex: "#5A5A56" },
     { code: "M4",  name: "MARROM CLARO AZTECA",       hex: "#8A6A4A" },
     { code: "M8",  name: "MARROM ESCURO PILÃO",       hex: "#4A2E1E" },
