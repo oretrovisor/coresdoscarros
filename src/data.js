@@ -53,6 +53,7 @@ export const DATA = {
   1973: [
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
     { code: "A6A", name: "AZUL GUAÍBA",               hex: "#3A6F95" },
+    { code: "W2",  name: "BRANCO ESPUMA MARINHA",     hex: "#D8E8E2", video: "Dtfr6xtnsYU" },
     { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4" },
     { code: "C4A", name: "CINZA CLARO HIMALAIA",      hex: "#C2C2BC", video: "LVAB9Rt4kN8" },
     { code: "C7",  name: "CINZA ESCURO",              hex: "#5A5A56" },
