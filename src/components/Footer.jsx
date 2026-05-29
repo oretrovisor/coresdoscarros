@@ -3,41 +3,50 @@ export default function Footer() {
     <>
       {/* Callouts above the footer */}
       <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12 flex flex-col gap-3">
-        {/* Sources / provisional data */}
-        <div className="callout rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
+        {/* Warning: provisional data */}
+        <div className="callout-warning rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
             className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
             style={{ background: '#e7d28a', color: '#6b5a16' }}
           >
+            !
+          </span>
+          <p className="text-[12.5px] font-medium leading-relaxed">
+            Dados provisórios, ainda em revisão.
+          </p>
+        </div>
+
+        {/* Info: sources */}
+        <div className="callout-info rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
+          <span
+            aria-hidden="true"
+            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
+            style={{ background: '#C9DCEB', color: '#2C4A6B' }}
+          >
             i
           </span>
-          <div className="flex flex-col gap-2">
-            <p className="text-[12.5px] font-medium leading-relaxed">
-              Dados provisórios, ainda em revisão.
-            </p>
-            <p className="text-[12.5px] leading-relaxed">
-              As informações foram compiladas a partir de fontes na internet, principalmente a{' '}
-              <a
-                className="callout-link"
-                href="https://www.chryslerclube.com.br/frisinho-cores.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                tabela de cores do Chrysler Clube
-              </a>{' '}
-              e{' '}
-              <a
-                className="callout-link"
-                href="https://www.instagram.com/p/B-H9MvjACgl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                esta publicação de @chryslerdobrasil no Instagram
-              </a>
-              .
-            </p>
-          </div>
+          <p className="text-[12.5px] leading-relaxed">
+            As informações foram compiladas a partir de fontes na internet, principalmente a{' '}
+            <a
+              className="callout-info-link"
+              href="https://www.chryslerclube.com.br/frisinho-cores.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              tabela de cores do Chrysler Clube
+            </a>{' '}
+            e{' '}
+            <a
+              className="callout-info-link"
+              href="https://www.instagram.com/p/B-H9MvjACgl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              esta publicação de @chryslerdobrasil no Instagram
+            </a>
+            .
+          </p>
         </div>
 
         {/* Thank-you / inspiration */}
