@@ -14,7 +14,7 @@ export const DATA = {
     { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#2F4A35", video: "KtUNxnks-f8" },
   ],
   1971: [
-    { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#E8B842", models: ["Charger R/T"], video: "J5uxLHuhZQo" },
+    { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#DE5C1E", models: ["Charger R/T"], video: "J5uxLHuhZQo" },
     { code: "BGY6",    name: "AMARELO CARAJÁ",          hex: "#E0A82E" },
     { code: "BGA5",    name: "AZUL ABAETÉ Metálico",    hex: "#2E4A6B" },
     { code: "BGA9",    name: "AZUL PROFUNDO Metálico",  hex: "#1E3050" },
