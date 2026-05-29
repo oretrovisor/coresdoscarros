@@ -30,6 +30,22 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
   );
 }
 
+function PhotoEmbed({ src, alt }) {
+  return (
+    <div
+      className="relative w-full border border-rule rounded-md overflow-hidden"
+      style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+  );
+}
+
 function VideoEmbed({ id }) {
   return (
     <div
@@ -113,7 +129,14 @@ export default function DetailCard({ color, year }) {
 
           {/* Right: photo */}
           <div className="flex flex-col gap-4">
-            <PhotoPlaceholder />
+            {color.photo ? (
+              <PhotoEmbed
+                src={`${import.meta.env.BASE_URL}photos/${color.photo}`}
+                alt={`${color.name} — ${year}`}
+              />
+            ) : (
+              <PhotoPlaceholder />
+            )}
           </div>
         </div>
 
