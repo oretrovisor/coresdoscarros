@@ -38,7 +38,7 @@ export const DATA = {
     { code: "W3",  name: "BRANCO POLAR",              hex: "#F3EFE6" },
     { code: "R8",  name: "BURGUNDY Metálico",         hex: "#5E1A2A" },
     { code: "C4A", name: "CINZA FENIX Metálico",      hex: "#8E8E8A" },
-    { code: "R5",  name: "MARROM CASTANHA Metálico",  hex: "#5A3A26" },
+    { code: "R5",  name: "MARROM CASTANHA Metálico",  hex: "#5A3A26", video: "D6hhKdACHVk" },
     { code: "M4",  name: "MARROM CLARO AZTECA",       hex: "#8A6A4A" },
     { code: "Y7",  name: "OURO ESPANHOL",             hex: "#C8962E" },
     { code: "P9",  name: "PRETO FORMAL",              hex: "#1A1A1A" },
@@ -48,7 +48,7 @@ export const DATA = {
     { code: "V4",  name: "VERDE MINUANO",             hex: "#4A6B45" },
     { code: "V2",  name: "VERDE TROPICAL",            hex: "#2D6A4A" },
     { code: "R4",  name: "VERMELHO ETRUSCO",          hex: "#8C1E22" },
-    { code: "R6",  name: "VERMELHO XAVANTE",          hex: "#7A1D2A" },
+    { code: "R6",  name: "VERMELHO XAVANTE",          hex: "#7A1D2A", video: "j_BkA1bBLUU" },
   ],
   1973: [
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
