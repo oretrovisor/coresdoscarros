@@ -21,7 +21,7 @@ export const DATA = {
     { code: "BGW2/W3", name: "BRANCO POLAR",            hex: "#F3EFE6" },
     { code: "BGC5",    name: "CINZA BARILOCHE",         hex: "#9A9A95" },
     { code: "BGV6",    name: "OLIVA D'OIRO",            hex: "#7A6E2A" },
-    { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E" },
+    { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E", video: "xFf2uzChpTY" },
     { code: "BGP9",    name: "PRETO FORMAL",            hex: "#1A1A1A" },
     { code: "BGV3",    name: "VERDE FRONTEIRA",         hex: "#3A5A3A", video: "EVbKmYGCEpc" },
     { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#2F4A35", video: "l6zd6dM8lf4" },
