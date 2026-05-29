@@ -59,7 +59,7 @@ export const DATA = {
     { code: "M4",  name: "MARROM CLARO AZTECA",       hex: "#8A6A4A" },
     { code: "M8",  name: "MARROM ESCURO PILÃO",       hex: "#4A2E1E" },
     { code: "P9A", name: "PRETO TURANDOT",            hex: "#1A1A1A" },
-    { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E" },
+    { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E", video: "76FRewBrnOE" },
     { code: "G4",  name: "VERDE CLARO FLORESTAL",     hex: "#5A7A45" },
     { code: "G5",  name: "VERDE MEDIO AMAZONAS",      hex: "#356B48" },
     { code: "R4A", name: "VERMELHO CLARO / INDIO",    hex: "#B0382A" },
