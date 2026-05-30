@@ -3,7 +3,7 @@ import Logo from './Logo';
 export default function Header() {
   return (
     <header className="border-b border-rule">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-7 flex items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5 sm:py-6 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <Logo size={34} />
           <h1 className="brand-title text-[34px] sm:text-[44px] leading-none" style={{ color: 'var(--ink)' }}>
