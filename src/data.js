@@ -190,3 +190,21 @@ export const MODELS = [
 export function modelsForYear(year) {
   return MODELS.filter((m) => year >= m.from && year <= m.to).map((m) => m.name);
 }
+
+// URL-friendly slug from a color name: lowercase, no accents, hyphenated.
+export function slugify(s) {
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+// Find the index of the color in a given year whose name matches `slug`.
+// Returns -1 if not found.
+export function findColorIndexBySlug(year, slug) {
+  const list = DATA[year];
+  if (!list) return -1;
+  return list.findIndex((c) => slugify(c.name) === slug);
+}

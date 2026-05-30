@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faXmark, faShareNodes } from '@fortawesome/free-solid-svg-icons';
 import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 import InfoBadge from './InfoBadge';
@@ -132,7 +132,7 @@ function VideoEmbed({ id }) {
   );
 }
 
-export default function DetailCard({ color, year }) {
+export default function DetailCard({ color, year, onShare }) {
   if (!color) {
     return (
       <div
@@ -171,10 +171,24 @@ export default function DetailCard({ color, year }) {
           <span>{color.code}</span>
           <span>{year}</span>
         </div>
-        <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium flex items-center gap-2.5">
-          <span>{color.name}</span>
-          {color.unconfirmed && <UnconfirmedBadge className="w-5 h-5" style={{ fontSize: '12px' }} />}
-        </h3>
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium flex items-center gap-2.5">
+            <span>{color.name}</span>
+            {color.unconfirmed && <UnconfirmedBadge className="w-5 h-5" style={{ fontSize: '12px' }} />}
+          </h3>
+          {onShare && (
+            <button
+              type="button"
+              onClick={() => onShare(year, color)}
+              title="Copiar link desta cor"
+              aria-label="Compartilhar esta cor"
+              className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-current"
+              style={{ color: 'inherit' }}
+            >
+              <FontAwesomeIcon icon={faShareNodes} style={{ fontSize: 15 }} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Body */}
