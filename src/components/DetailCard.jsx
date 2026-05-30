@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage } from '@fortawesome/free-solid-svg-icons';
 import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 import InfoBadge from './InfoBadge';
@@ -18,14 +20,10 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
       className="relative w-full border border-rule rounded-md stripes overflow-hidden flex items-center justify-center"
       style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
     >
-      <div className="flex flex-col items-center gap-2 text-center px-4">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: 'var(--muted)' }}>
-          <rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
-          <circle cx="8.5" cy="10" r="1.4" stroke="currentColor" strokeWidth="1.4" />
-          <path d="M4 17l5-5 4 4 3-3 4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <div className="font-mono text-[11px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>{label}</div>
-        <div className="font-mono text-[10.5px]" style={{ color: 'var(--muted)' }}>a inserir</div>
+      <div className="flex flex-col items-center gap-2 text-center px-4" style={{ color: 'var(--muted)' }}>
+        <FontAwesomeIcon icon={faImage} style={{ fontSize: 26 }} />
+        <div className="font-mono text-[11px] tracking-[0.18em] uppercase">{label}</div>
+        <div className="font-mono text-[10.5px]">a inserir</div>
       </div>
     </div>
   );

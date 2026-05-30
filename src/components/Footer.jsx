@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamation, faInfo, faHeart } from '@fortawesome/free-solid-svg-icons';
+
 export default function Footer() {
   return (
     <>
@@ -7,10 +10,10 @@ export default function Footer() {
         <div className="callout-warning rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
-            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
+            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full shrink-0"
             style={{ background: '#e7d28a', color: '#6b5a16' }}
           >
-            !
+            <FontAwesomeIcon icon={faExclamation} style={{ fontSize: 10 }} />
           </span>
           <p className="text-[12.5px] font-medium leading-relaxed">
             Dados provisórios, ainda em revisão.
@@ -21,10 +24,10 @@ export default function Footer() {
         <div className="callout-info rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
-            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-mono font-semibold shrink-0"
+            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full shrink-0"
             style={{ background: '#C9DCEB', color: '#2C4A6B' }}
           >
-            i
+            <FontAwesomeIcon icon={faInfo} style={{ fontSize: 10 }} />
           </span>
           <p className="text-[12.5px] leading-relaxed">
             As informações foram compiladas a partir de fontes na internet, principalmente a{' '}
@@ -53,10 +56,10 @@ export default function Footer() {
         <div className="callout-thanks rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
             aria-hidden="true"
-            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full text-[12px] shrink-0"
+            className="mt-0.5 inline-flex items-center justify-center w-5 h-5 rounded-full shrink-0"
             style={{ background: '#D6E6E1', color: '#2E5A55' }}
           >
-            {'♥︎'}
+            <FontAwesomeIcon icon={faHeart} style={{ fontSize: 10 }} />
           </span>
           <p className="text-[12.5px] leading-relaxed">
             O projeto se inspira na{' '}

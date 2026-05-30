@@ -1,22 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera, faVideo } from '@fortawesome/free-solid-svg-icons';
 import UnconfirmedBadge from './UnconfirmedBadge';
-
-function PhotoIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-      <rect x="1" y="3" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
-      <circle cx="7" cy="7.5" r="2" stroke="currentColor" strokeWidth="1.2" />
-    </svg>
-  );
-}
-
-function VideoIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-      <rect x="1" y="4" width="8" height="6" rx="0.8" fill="currentColor" />
-      <path d="M9 6 L13 4 L13 10 L9 8 Z" fill="currentColor" />
-    </svg>
-  );
-}
 
 function ColorCard({ color, selected, onClick }) {
   const hasMedia = color.photo || color.video;
@@ -45,15 +29,15 @@ function ColorCard({ color, selected, onClick }) {
         </span>
       </span>
       {hasMedia && (
-        <span className="shrink-0 flex items-center gap-1.5" style={{ color: 'var(--muted)' }}>
+        <span className="shrink-0 flex items-center gap-2" style={{ color: 'var(--muted)' }}>
           {color.photo && (
             <span title="Tem foto" aria-label="Tem foto" className="inline-flex">
-              <PhotoIcon />
+              <FontAwesomeIcon icon={faCamera} style={{ fontSize: 13 }} />
             </span>
           )}
           {color.video && (
             <span title="Tem vídeo" aria-label="Tem vídeo" className="inline-flex">
-              <VideoIcon />
+              <FontAwesomeIcon icon={faVideo} style={{ fontSize: 13 }} />
             </span>
           )}
         </span>
