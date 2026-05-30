@@ -18,6 +18,14 @@ function parseHash() {
   return { year, index: idx };
 }
 
+// Random {year, index} across the entire archive.
+function randomSelection() {
+  const year = YEARS[Math.floor(Math.random() * YEARS.length)];
+  const list = DATA[year] || [];
+  const index = list.length ? Math.floor(Math.random() * list.length) : 0;
+  return { year, index };
+}
+
 function buildHash(year, color) {
   return `#${year}/${slugify(color.name)}`;
 }
@@ -27,10 +35,12 @@ function buildShareUrl(year, color) {
 }
 
 export default function App() {
-  const initial = typeof window !== 'undefined' ? parseHash() : null;
+  // Hash wins (shared link); otherwise pick a random color across the archive.
+  const initial =
+    (typeof window !== 'undefined' && parseHash()) || randomSelection();
   const [brand, setBrand] = useState('Chrysler do Brasil');
-  const [year, setYearState] = useState(initial?.year ?? 1970);
-  const [selectedIndex, setSelectedIndex] = useState(initial?.index ?? 0);
+  const [year, setYearState] = useState(initial.year);
+  const [selectedIndex, setSelectedIndex] = useState(initial.index);
   const [toastMsg, setToastMsg] = useState(null);
 
   // Year change from UI: reset color to first entry.
