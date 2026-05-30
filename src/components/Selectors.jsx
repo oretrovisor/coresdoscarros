@@ -1,9 +1,22 @@
 import { YEARS } from '../data';
 
+// Group years into decade buckets so each decade gets its own row.
+function groupByDecade(years) {
+  const buckets = new Map();
+  for (const y of years) {
+    const decade = Math.floor(y / 10) * 10;
+    if (!buckets.has(decade)) buckets.set(decade, []);
+    buckets.get(decade).push(y);
+  }
+  return Array.from(buckets.entries()).sort(([a], [b]) => a - b);
+}
+
 export default function Selectors({ brand, setBrand, year, setYear }) {
+  const decades = groupByDecade(YEARS);
+
   return (
     <section className="border-b border-rule">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5 sm:py-6 grid gap-5 sm:gap-8 sm:grid-cols-[1fr_2fr] items-start">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-5 sm:py-6 grid gap-5 lg:gap-8 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] items-start">
         {/* Marca */}
         <div>
           <label
@@ -47,19 +60,23 @@ export default function Selectors({ brand, setBrand, year, setYear }) {
             ))}
           </select>
 
-          {/* Desktop: year pills */}
-          <div className="hidden sm:flex flex-wrap gap-1.5">
-            {YEARS.map((y) => (
-              <button
-                key={y}
-                type="button"
-                onClick={() => setYear(y)}
-                data-active={y === year}
-                className="year-pill font-mono text-[12.5px] tracking-wide border border-rule rounded-md px-2.5 py-1.5 bg-white hover:bg-[#F2F2F2] transition-colors"
-                style={{ color: 'var(--ink)' }}
-              >
-                {y}
-              </button>
+          {/* Desktop: year pills — one row per decade */}
+          <div className="hidden sm:flex sm:flex-col gap-1.5">
+            {decades.map(([decade, years]) => (
+              <div key={decade} className="flex flex-wrap gap-1.5">
+                {years.map((y) => (
+                  <button
+                    key={y}
+                    type="button"
+                    onClick={() => setYear(y)}
+                    data-active={y === year}
+                    className="year-pill font-mono text-[12.5px] tracking-wide border border-rule rounded-md px-2.5 py-1.5 bg-white hover:bg-[#F2F2F2] transition-colors"
+                    style={{ color: 'var(--ink)' }}
+                  >
+                    {y}
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
         </div>
