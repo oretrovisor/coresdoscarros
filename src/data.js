@@ -31,7 +31,7 @@ export const DATA = {
     { code: "BGR6",    name: "VERMELHO XAVANTE",        hex: "#7A1D2A" },
   ],
   1972: [
-    { code: "Y5",  name: "AMARELO BOREAL",            hex: "#E8B842" },
+    { code: "Y5",  name: "AMARELO BOREAL",            hex: "#DE5C1E" },
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
     { code: "A5",  name: "AZUL ABAETÉ Metálico",      hex: "#2E4A6B" },
     { code: "A7",  name: "AZUL NAUTICO Metálico",     hex: "#2A5278" },
