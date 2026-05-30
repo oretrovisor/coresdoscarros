@@ -123,7 +123,6 @@ export default function App() {
             colors={colors}
             selectedIndex={selectedIndex}
             onSelect={setSelectedIndex}
-            onShare={shareColor}
           />
           <DetailCard color={selectedColor} year={year} onShare={shareColor} />
         </div>
