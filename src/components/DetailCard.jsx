@@ -171,24 +171,22 @@ export default function DetailCard({ color, year, onShare }) {
           <span>{color.code}</span>
           <span>{year}</span>
         </div>
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium flex items-center gap-2.5">
-            <span>{color.name}</span>
-            {color.unconfirmed && <UnconfirmedBadge className="w-5 h-5" style={{ fontSize: '12px' }} />}
-          </h3>
+        <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium flex items-center flex-wrap gap-x-2.5 gap-y-1">
+          <span>{color.name}</span>
+          {color.unconfirmed && <UnconfirmedBadge className="w-5 h-5" style={{ fontSize: '12px' }} />}
           {onShare && (
             <button
               type="button"
               onClick={() => onShare(year, color)}
               title="Copiar link desta cor"
               aria-label="Compartilhar esta cor"
-              className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-current"
+              className="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-black/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-current"
               style={{ color: 'inherit' }}
             >
-              <FontAwesomeIcon icon={faShareNodes} style={{ fontSize: 15 }} />
+              <FontAwesomeIcon icon={faShareNodes} style={{ fontSize: 14 }} />
             </button>
           )}
-        </div>
+        </h3>
       </div>
 
       {/* Body */}
