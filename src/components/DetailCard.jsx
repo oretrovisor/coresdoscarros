@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { modelsForYear } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 import InfoBadge from './InfoBadge';
@@ -31,27 +31,82 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
 
 function PhotoEmbed({ src, alt, caption }) {
   const [failed, setFailed] = useState(false);
+  const [open, setOpen] = useState(false);
   if (failed) return <PhotoPlaceholder />;
   return (
-    <figure className="m-0">
-      <div
-        className="relative w-full border border-rule rounded-md overflow-hidden"
-        style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+    <>
+      <figure className="m-0">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-label={`Ampliar foto: ${alt}`}
+          className="relative block w-full border border-rule rounded-md overflow-hidden cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-black/15"
+          style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+        >
+          <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            onError={() => setFailed(true)}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </button>
+        {caption && (
+          <figcaption className="mt-2 text-[11.5px] italic leading-snug" style={{ color: 'var(--muted)' }}>
+            {caption}
+          </figcaption>
+        )}
+      </figure>
+      {open && <Lightbox src={src} alt={alt} caption={caption} onClose={() => setOpen(false)} />}
+    </>
+  );
+}
+
+function Lightbox({ src, alt, caption, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={alt}
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 sm:p-8 fade-in"
+      style={{ background: 'rgba(0,0,0,0.88)' }}
+      onClick={onClose}
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        autoFocus
+        aria-label="Fechar"
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
       >
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          onError={() => setFailed(true)}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
+        <FontAwesomeIcon icon={faXmark} style={{ fontSize: 20 }} />
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        onClick={(e) => e.stopPropagation()}
+        className="max-h-[85vh] max-w-full object-contain rounded-md shadow-2xl"
+      />
       {caption && (
-        <figcaption className="mt-2 text-[11.5px] italic leading-snug" style={{ color: 'var(--muted)' }}>
+        <figcaption
+          onClick={(e) => e.stopPropagation()}
+          className="mt-3 max-w-3xl text-center text-[13px] italic text-white/80"
+        >
           {caption}
         </figcaption>
       )}
-    </figure>
+    </div>
   );
 }
 
