@@ -151,6 +151,9 @@ export default function DetailCard({ color, year, onShare }) {
 
   const light = isLight(color.hex);
   const models = color.models ?? modelsForYear(year);
+  const videoIds = color.video
+    ? (Array.isArray(color.video) ? color.video : [color.video])
+    : [];
 
   return (
     <article
@@ -221,8 +224,10 @@ export default function DetailCard({ color, year, onShare }) {
           </div>
         </div>
 
-        {/* Full-width video (only when present) */}
-        {color.video && <VideoEmbed id={color.video} />}
+        {/* Full-width video(s), when present */}
+        {videoIds.map((id) => (
+          <VideoEmbed key={id} id={id} />
+        ))}
 
         {/* Notes below the video */}
         <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
