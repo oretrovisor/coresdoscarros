@@ -11,9 +11,12 @@ function PhotoIcon() {
 
 function VideoIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-      <rect x="1" y="6" width="12" height="6.5" rx="0.8" stroke="currentColor" strokeWidth="1.2" />
-      <path d="M1 4.5 L13 3 L13 6 L1 6 Z" fill="currentColor" />
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M1 2.5h12v9H1z M2.5 4h1.4v1.4H2.5z M5.7 4h1.4v1.4H5.7z M8.9 4h1.4v1.4H8.9z M2.5 8.6h1.4v1.4H2.5z M5.7 8.6h1.4v1.4H5.7z M8.9 8.6h1.4v1.4H8.9z"
+      />
     </svg>
   );
 }
