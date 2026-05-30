@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { modelsForYear } from '../data';
@@ -57,7 +58,10 @@ function PhotoEmbed({ src, alt, caption }) {
           </figcaption>
         )}
       </figure>
-      {open && <Lightbox src={src} alt={alt} caption={caption} onClose={() => setOpen(false)} />}
+      {open && createPortal(
+        <Lightbox src={src} alt={alt} caption={caption} onClose={() => setOpen(false)} />,
+        document.body
+      )}
     </>
   );
 }
