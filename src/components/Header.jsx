@@ -9,9 +9,12 @@ export default function Header() {
           onClick={(e) => {
             if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
             e.preventDefault();
+            if (window.location.hash) {
+              window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
             window.location.reload();
           }}
-          aria-label="Cores dos Carros — recarregar página"
+          aria-label="Cores dos Carros — voltar à página inicial"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
         >
           <Logo size={34} />
