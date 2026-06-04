@@ -127,7 +127,7 @@ export const DATA = {
     { code: "PT3", name: "CASTANHO TRIPOLI",          hex: "#6A4527" },
     { code: "PT1", name: "OURO TOLEDO",               hex: "#C8962E", video: "JaLAf5TUZFA" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
-    { code: "PE7", name: "VERMELHO VERONA",           hex: "#8C1E22" },
+    { code: "PE7", name: "VERMELHO VERONA",           hex: "#8C1E22", video: "3hMTBepNJew" },
   ],
   1979: [
     { code: "SB3", name: "AZUL CADETE",                          hex: "#4A6B8A" },
