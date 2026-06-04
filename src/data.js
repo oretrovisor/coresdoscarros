@@ -84,7 +84,7 @@ export const DATA = {
     { code: "R3A", name: "VERMELHO TUDOR",               hex: "#8C1E22" },
   ],
   1975: [
-    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842" },
+    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842", video: "i-uJUbtuUOM" },
     { code: "LB7", name: "AZUL MEIA NOITE",           hex: "#1F2F50" },
     { code: "LB6", name: "AZUL VITÓRIA",              hex: "#2E4A6B", unconfirmed: true },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
@@ -121,7 +121,7 @@ export const DATA = {
   ],
   1978: [
     { code: "PK3", name: "AMARELO ALAMO",             hex: "#E0A82E" },
-    { code: "PB2", name: "AZUL CAPRI",                hex: "#3A6F95" },
+    { code: "PB2", name: "AZUL CAPRI",                hex: "#3A6F95", video: "vsC0rMga8Gw" },
     { code: "NT2", name: "BEGE INDIANO",              hex: "#CDB88A" },
     { code: "PW1", name: "BRANCO MADAGASCAR",         hex: "#F3EFE6" },
     { code: "PT3", name: "CASTANHO TRIPOLI",          hex: "#6A4527" },
