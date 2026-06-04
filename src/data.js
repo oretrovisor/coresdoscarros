@@ -140,7 +140,7 @@ export const DATA = {
     { code: "ST5", name: "MARROM SUMATRA",                       hex: "#5A3A26" },
     { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#8A6A4A", models: ["Magnum"] },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A" },
-    { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22" },
+    { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22", video: "IdcdeJt9ZcY" },
   ],
   1980: [
     { code: "SB3",     name: "AZUL CADETE",                hex: "#4A6B8A" },
