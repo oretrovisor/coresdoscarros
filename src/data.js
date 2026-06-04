@@ -131,7 +131,7 @@ export const DATA = {
   ],
   1979: [
     { code: "SB3", name: "AZUL CADETE",                          hex: "#4A6B8A" },
-    { code: "SB9", name: "AZUL ESTELAR",                         hex: "#2A4A78" },
+    { code: "SB9", name: "AZUL ESTELAR",                         hex: "#2A4A78", video: "YUN7m78DMCA" },
     { code: "AZ1", name: "AZUL ESTELAR/AZUL CADET",              hex: "#2A4A78" },
     { code: "ST2", name: "BEGE CASHMIRE",                        hex: "#D7C39A" },
     { code: "SW1", name: "BRANCO ARTICO",                        hex: "#F1EDE4" },
@@ -156,10 +156,10 @@ export const DATA = {
   ],
   1981: [
     { code: "L8A", name: "BEGE PALHA",                hex: "#D8C89A" },
-    { code: "L9A", name: "BRANCO PAINA",              hex: "#F3EFE6" },
+    { code: "L9A", name: "BRANCO PAINA",              hex: "#F3EFE6", video: "g3s4OBj9MKw" },
     { code: "L7C", name: "CINZA CHUMBO",              hex: "#5A5A56" },
     { code: "L8C", name: "MARROM AVELA",              hex: "#8A6A4A" },
-    { code: "L8B", name: "MARROM CAFÉ",               hex: "#4A2E1E" },
+    { code: "L8B", name: "MARROM CAFÉ",               hex: "#4A2E1E", video: "Cu0tcJnH3XA" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
     { code: "L6A", name: "VERDE TURMALINA",           hex: "#2D6A4A" },
     { code: "L3A", name: "VERMELHO CALIPSO",          hex: "#9A2418" },
