@@ -93,7 +93,7 @@ export const DATA = {
     { code: "LS2", name: "PRATA LUNAR",               hex: "#B8B5AD" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
     { code: "LF2", name: "VERDE AUSTRÍACO",           hex: "#2F4A35", unconfirmed: true },
-    { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32" },
+    { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32", video: "2w48N7qHevc" },
     { code: "LR7", name: "VERMELHO AZTECA",           hex: "#9A2418" },
     { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#7D1C2E" },
   ],
