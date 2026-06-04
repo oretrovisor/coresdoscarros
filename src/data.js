@@ -100,7 +100,7 @@ export const DATA = {
   1976: [
     { code: "MY2", name: "AMARELO TENERIFE",          hex: "#E8B842" },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
-    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#6A4527" },
+    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#6A4527", video: "xp5ZzUB7w74" },
     { code: "MY9", name: "MARROM IGUAÇU",             hex: "#5A3A26" },
     { code: "MA2", name: "PRATA MONTEREY",            hex: "#B8B5AD" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
