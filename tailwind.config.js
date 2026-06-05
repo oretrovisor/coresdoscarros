@@ -13,9 +13,9 @@ export default {
       },
       colors: {
         brand: {
-          DEFAULT: '#1c7870',
+          DEFAULT: '#1F7770',
           dark: '#17615b',
-          light: '#FFE8A8',
+          light: '#ECE1A8',
         },
         ink: '#222222',
         paper: '#FFFFFF',
