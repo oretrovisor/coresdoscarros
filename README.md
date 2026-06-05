@@ -140,10 +140,11 @@ A lista de modelos exibida no detalhe é calculada a partir de **`MODELS`** em `
 ```js
 export const MODELS = [
   { name: "1800",        from: 1973, to: 1975 },
-  { name: "Charger",     from: 1971, to: 1981 },
+  { name: "Charger",     from: 1971, to: 1972 },
+  { name: "Charger LS",  from: 1973, to: 1975 },
   { name: "Charger R/T", from: 1971, to: 1981 },
   { name: "Dart Sedã",   from: 1970, to: 1981 },
-  { name: "Dart Coupé",  from: 1970, to: 1981 },
+  { name: "Dart Coupé",  from: 1971, to: 1981 },
   { name: "LeBaron",     from: 1979, to: 1980 },
   { name: "Magnum",      from: 1979, to: 1981 },
   { name: "Polara",      from: 1976, to: 1981 },
