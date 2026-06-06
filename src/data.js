@@ -35,7 +35,7 @@ export const DATA = {
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
     { code: "A5",  name: "AZUL ABAETÉ Metálico",      hex: "#2E4A6B" },
     { code: "A7",  name: "AZUL NAUTICO Metálico",     hex: "#2A5278" },
-    { code: "W3",  name: "BRANCO POLAR",              hex: "#F3EFE6" },
+    { code: "W3",  name: "BRANCO POLAR",              hex: "#F3EFE6", photo: "1972-dodge-charger-rt-branco-polar.jpg", photoCaption: "1972 Dodge Charger R/T Branco Polar" },
     { code: "R8",  name: "BURGUNDY Metálico",         hex: "#5E1A2A" },
     { code: "C4A", name: "CINZA FENIX Metálico",      hex: "#8E8E8A" },
     { code: "R5",  name: "MARROM CASTANHA Metálico",  hex: "#5A3A26", video: "D6hhKdACHVk" },
