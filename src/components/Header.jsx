@@ -22,6 +22,7 @@ export default function Header() {
             Cores dos Carros
           </h1>
         </a>
+        {/* Contato button hidden for now — restore by removing this comment wrapper.
         <button
           type="button"
           className="font-mono text-[11px] sm:text-[12px] tracking-[0.18em] uppercase rounded-full px-4 py-2 transition-colors border border-rule bg-white hover:bg-[#F2F2F2]"
@@ -29,6 +30,7 @@ export default function Header() {
         >
           Contato
         </button>
+        */}
       </div>
     </header>
   );
