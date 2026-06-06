@@ -95,7 +95,7 @@ export const DATA = {
     { code: "LF2", name: "VERDE AUSTRÍACO",           hex: "#2F4A35", unconfirmed: true },
     { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32", video: "2w48N7qHevc" },
     { code: "LR7", name: "VERMELHO AZTECA",           hex: "#A8474A", video: "a4cbli2ObYU" },
-    { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#7D1C2E" },
+    { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#D8392B" },
   ],
   1976: [
     { code: "MY2", name: "AMARELO TENERIFE",          hex: "#E8B842" },
