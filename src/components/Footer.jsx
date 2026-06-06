@@ -77,7 +77,7 @@ export default function Footer() {
       </div>
 
       <footer className="border-t border-rule mt-6">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex items-center justify-between gap-4 flex-wrap">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex flex-col items-center text-center gap-3 sm:flex-row sm:justify-between sm:text-left sm:gap-4 sm:flex-wrap">
           <div
             className="font-mono text-[10.5px] tracking-[0.18em] uppercase"
             style={{ color: 'var(--muted)' }}
