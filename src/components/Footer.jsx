@@ -16,7 +16,7 @@ export default function Footer() {
             <FontAwesomeIcon icon={faExclamation} style={{ fontSize: 10 }} />
           </span>
           <p className="text-[12.5px] font-medium leading-relaxed">
-            Dados provisórios, ainda em revisão.
+            Dados atualizados continuamente e sujeitos a correções.
           </p>
         </div>
 
