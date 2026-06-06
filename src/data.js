@@ -88,7 +88,7 @@ export const DATA = {
     { code: "LB7", name: "AZUL MEIA NOITE",           hex: "#1F2F50" },
     { code: "LB6", name: "AZUL VITÓRIA",              hex: "#2E4A6B", unconfirmed: true },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
-    { code: "LT2", name: "CASTANHO CORSA",            hex: "#6A4527" },
+    { code: "LT2", name: "CASTANHO CORSA",            hex: "#C97632", video: "vawQ64D4kvo" },
     { code: "LT9", name: "MARROM CLÁSSICO",           hex: "#5A3A26" },
     { code: "LS2", name: "PRATA LUNAR",               hex: "#B8B5AD" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
