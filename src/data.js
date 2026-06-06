@@ -84,7 +84,7 @@ export const DATA = {
     { code: "R3A", name: "VERMELHO TUDOR",               hex: "#8C1E22" },
   ],
   1975: [
-    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842", video: "i-uJUbtuUOM" },
+    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842", video: ["i-uJUbtuUOM", "7dqOyW6Hyug"] },
     { code: "LB7", name: "AZUL MEIA NOITE",           hex: "#1F2F50" },
     { code: "LB6", name: "AZUL VITÓRIA",              hex: "#2E4A6B", unconfirmed: true },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
