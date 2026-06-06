@@ -1,0 +1,29 @@
+{
+  "name": "Cores dos Carros",
+  "short_name": "Cores dos Carros",
+  "description": "Catálogo histórico das cores de tinta automotiva da Chrysler do Brasil (1970–1981).",
+  "lang": "pt-BR",
+  "start_url": "/coresdoscarros/",
+  "scope": "/coresdoscarros/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1F7770",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
