@@ -71,7 +71,7 @@ export default function App() {
   // history entries, and shared links surface useful context.
   useEffect(() => {
     if (selectedColor) {
-      document.title = `${selectedColor.name} (${year}) — Cores dos Carros`;
+      document.title = `Cores dos Carros | ${selectedColor.name} (${year})`;
     } else {
       document.title = 'Cores dos Carros';
     }
