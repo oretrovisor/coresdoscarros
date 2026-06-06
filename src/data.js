@@ -11,7 +11,7 @@ export const DATA = {
     { code: "BEA9", name: "AZUL PROFUNDO Metálico", hex: "#1E3050" },
     { code: "BEW2", name: "BRANCO POLAR",          hex: "#EEF1F2" },
     { code: "BEP9", name: "PRETO FORMAL",          hex: "#1A1A1A" },
-    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#2F4A35", video: "KtUNxnks-f8" },
+    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#3D5E44", video: "KtUNxnks-f8" },
   ],
   1971: [
     { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#DE5C1E", models: ["Charger R/T"], video: "J5uxLHuhZQo" },
@@ -24,7 +24,7 @@ export const DATA = {
     { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E", video: "xFf2uzChpTY" },
     { code: "BGP9",    name: "PRETO FORMAL",            hex: "#1A1A1A" },
     { code: "BGV3",    name: "VERDE FRONTEIRA",         hex: "#BFCCB7", video: ["EVbKmYGCEpc", "MnegFzdN2iQ"] },
-    { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#2F4A35", video: "l6zd6dM8lf4" },
+    { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#3D5E44", video: "l6zd6dM8lf4" },
     { code: "BGV4",    name: "VERDE MINUANO",           hex: "#4A6B45" },
     { code: "BGV2",    name: "VERDE TROPICAL",          hex: "#2D6A4A", models: ["Charger R/T"] },
     { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#8C1E22", video: ["6EFT2-Vs29w", "pVwBfcKvEpU"] },
