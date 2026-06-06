@@ -115,7 +115,7 @@ export const DATA = {
     { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#6A4527" },
     { code: "MY9", name: "MARROM IGUAÇU",             hex: "#5A3A26" },
     { code: "MA2", name: "PRATA MONTEREY",            hex: "#B8B5AD" },
-    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
+    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "unPjhMC_QXY" },
     { code: "NE4", name: "VERMELHO RIVIERA",          hex: "#9A2418" },
     { code: "ME9", name: "VERMELHO VENEZA",           hex: "#8C1E22" },
   ],
