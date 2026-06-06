@@ -2,7 +2,7 @@
 
 Catálogo histórico das cores de tinta automotiva da **Chrysler do Brasil** entre **1970 e 1981**, organizadas por ano com código original, nome de fábrica, foto e vídeo de referência quando disponíveis.
 
-🔗 **Site no ar:** https://oretrovisor.github.io/coresdoscarros/
+🔗 **Site no ar:** https://coresdoscarros.oretrovisor.com
 
 Um projeto de [O Retrovisor](https://oretrovisor.com/), com inspiração na [coleção do AGBadolato](https://www.youtube.com/@agbadolato/videos).
 
@@ -34,7 +34,7 @@ npm install
 npm run dev
 ```
 
-Abre em `http://localhost:5173/coresdoscarros/`.
+Abre em `http://localhost:5173/`.
 
 Para gerar a build de produção:
 
@@ -54,7 +54,7 @@ Todo `push` para `main` dispara o workflow `.github/workflows/deploy.yml`, que:
 
 Não há ambiente de homologação — testa localmente (ou direto no PR) antes de mandar pra `main`.
 
-A `vite.config.js` define `base: '/coresdoscarros/'`, então **todos os assets respeitam esse prefixo automaticamente**. Para usar um domínio próprio (ex.: `coresdoscarros.com.br`), ajustar o `base` para `'/'` e configurar o domínio nas settings do Pages.
+O domínio próprio (`coresdoscarros.oretrovisor.com`) é declarado em `public/CNAME` (lido pelo GitHub Pages no momento do deploy) e a `vite.config.js` usa `base: '/'` para servir os assets a partir da raiz.
 
 ---
 
