@@ -27,7 +27,7 @@ export const DATA = {
     { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#2F4A35", video: "l6zd6dM8lf4" },
     { code: "BGV4",    name: "VERDE MINUANO",           hex: "#4A6B45" },
     { code: "BGV2",    name: "VERDE TROPICAL",          hex: "#2D6A4A", models: ["Charger R/T"] },
-    { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#8C1E22", video: "pVwBfcKvEpU" },
+    { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#8C1E22", video: ["6EFT2-Vs29w", "pVwBfcKvEpU"] },
     { code: "BGR6",    name: "VERMELHO XAVANTE",        hex: "#7A1D2A" },
   ],
   1972: [
