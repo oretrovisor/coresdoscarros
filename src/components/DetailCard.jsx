@@ -19,7 +19,7 @@ function PhotoPlaceholder({ label = 'Foto do carro' }) {
   return (
     <div
       className="relative w-full border border-rule rounded-md stripes overflow-hidden flex items-center justify-center"
-      style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+      style={{ aspectRatio: '3/2', background: 'var(--surface-soft)' }}
     >
       <div className="flex flex-col items-center gap-2 text-center px-4" style={{ color: 'var(--muted)' }}>
         <FontAwesomeIcon icon={faImage} style={{ fontSize: 26 }} />
@@ -42,7 +42,7 @@ function PhotoEmbed({ src, alt, caption }) {
           onClick={() => setOpen(true)}
           aria-label={`Ampliar foto: ${alt}`}
           className="relative block w-full border border-rule rounded-md overflow-hidden cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-black/15"
-          style={{ aspectRatio: '4/3', background: 'var(--surface-soft)' }}
+          style={{ aspectRatio: '3/2', background: 'var(--surface-soft)' }}
         >
           <img
             src={src}
