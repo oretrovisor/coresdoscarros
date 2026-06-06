@@ -44,7 +44,7 @@ export const DATA = {
     { code: "P9",  name: "PRETO FORMAL",              hex: "#1A1A1A" },
     { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E" },
     { code: "V3",  name: "VERDE FRONTEIRA",           hex: "#BFCCB7" },
-    { code: "V7",  name: "VERDE IGARAPÉ Metálico",    hex: "#3F6B4A" },
+    { code: "V7",  name: "VERDE IGARAPÉ Metálico",    hex: "#3F6B4A", video: "B7H_c6TpQeM" },
     { code: "V4",  name: "VERDE MINUANO",             hex: "#4A6B45" },
     { code: "V2",  name: "VERDE TROPICAL",            hex: "#2D6A4A" },
     { code: "R4",  name: "VERMELHO ETRUSCO",          hex: "#8C1E22" },
