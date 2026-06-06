@@ -77,6 +77,18 @@ export default function App() {
     }
   }, [selectedColor, year]);
 
+  // Fire a Google Analytics page_view event per color so each shows up as its
+  // own page in GA reports (Pages and screens, Realtime, etc.).
+  useEffect(() => {
+    if (!selectedColor || typeof window.gtag !== 'function') return;
+    const path = `/${year}/${slugify(selectedColor.name)}`;
+    window.gtag('event', 'page_view', {
+      page_path: path,
+      page_location: window.location.href,
+      page_title: `Cores dos Carros | ${selectedColor.name} (${year})`,
+    });
+  }, [selectedColor, year]);
+
   // React to back/forward / manual hash edits.
   useEffect(() => {
     function onHashChange() {

@@ -40,7 +40,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-ZXPHRPRLJB');
+      // Auto page_view disabled: React fires a manual one with the selected color's
+      // path + title (so GA reports each color as its own page).
+      gtag('config', 'G-ZXPHRPRLJB', { send_page_view: false });
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
