@@ -157,7 +157,7 @@ export const DATA = {
   1981: [
     { code: "L8A", name: "BEGE PALHA",                hex: "#D8C89A" },
     { code: "L9A", name: "BRANCO PAINA",              hex: "#F3EFE6", video: "g3s4OBj9MKw" },
-    { code: "L7C", name: "CINZA CHUMBO",              hex: "#5A5A56" },
+    { code: "L7C", name: "CINZA CHUMBO",              hex: "#5A5A56", video: "VUy8N2J-13s" },
     { code: "L8C", name: "MARROM AVELA",              hex: "#8A6A4A" },
     { code: "L8B", name: "MARROM CAFÉ",               hex: "#4A2E1E", video: "Cu0tcJnH3XA" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "H0SYvge5fY0" },
