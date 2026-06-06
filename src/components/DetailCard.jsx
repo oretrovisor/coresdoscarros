@@ -158,7 +158,7 @@ export default function DetailCard({ color, year, onShare }) {
   return (
     <article
       key={color.name + year}
-      className="fade-in border border-rule rounded-lg overflow-hidden"
+      className="fade-in border border-rule rounded-lg overflow-hidden h-full flex flex-col"
       style={{ background: 'var(--surface-soft)' }}
     >
       {/* Large swatch header */}
@@ -193,7 +193,7 @@ export default function DetailCard({ color, year, onShare }) {
       </div>
 
       {/* Body */}
-      <div className="p-5 sm:p-7 flex flex-col gap-6">
+      <div className="p-5 sm:p-7 flex flex-col gap-6 flex-1">
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Left: models */}
           <section>
@@ -229,15 +229,14 @@ export default function DetailCard({ color, year, onShare }) {
           <VideoEmbed key={id} id={id} />
         ))}
 
-        {/* Notes below the video */}
-        <aside className="pl-3.5 py-1" style={{ borderLeft: '2px solid var(--rule)' }}>
+        {/* Notes pinned to the bottom of the card */}
+        <aside className="pl-3.5 py-1 mt-auto" style={{ borderLeft: '2px solid var(--rule)' }}>
           <div className="font-mono text-[10.5px] tracking-[0.18em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
             Notas
           </div>
           <p className="text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>
-            Fotos e vídeos foram retirados da internet apenas para fins ilustrativos. As cores
-            exibidas na tela podem ser diferentes da coloração real do veículo, por isso não devem
-            ser usadas como referência para restaurações.
+            Imagens e vídeos são apenas ilustrativos. As cores exibidas na tela podem diferir da
+            cor real do veículo e não devem ser usadas como referência para restaurações.
           </p>
         </aside>
       </div>
