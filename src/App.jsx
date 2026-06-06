@@ -67,6 +67,16 @@ export default function App() {
     }
   }, [year, selectedColor]);
 
+  // Keep the document title in sync with the selected color so browser tabs,
+  // history entries, and shared links surface useful context.
+  useEffect(() => {
+    if (selectedColor) {
+      document.title = `${selectedColor.name} (${year}) — Cores dos Carros`;
+    } else {
+      document.title = 'Cores dos Carros';
+    }
+  }, [selectedColor, year]);
+
   // React to back/forward / manual hash edits.
   useEffect(() => {
     function onHashChange() {
