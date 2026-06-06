@@ -55,7 +55,7 @@ export const DATA = {
     { code: "A6A", name: "AZUL GUAÍBA",               hex: "#3A6F95" },
     { code: "W2",  name: "BRANCO ESPUMA MARINHA",     hex: "#E5ECF2", video: "Dtfr6xtnsYU" },
     { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4" },
-    { code: "C4A", name: "CINZA CLARO HIMALAIA",      hex: "#C2C2BC", video: ["LVAB9Rt4kN8", "BbQs44QpJI0"] },
+    { code: "C4A", name: "CINZA HIMALAIA",            hex: "#C2C2BC", video: ["LVAB9Rt4kN8", "BbQs44QpJI0"] },
     { code: "C7",  name: "CINZA ESCURO",              hex: "#5A5A56" },
     { code: "M4",  name: "MARROM AZTECA",             hex: "#8A6A4A" },
     { code: "M8",  name: "MARROM ESCURO PILÃO",       hex: "#4A2E1E" },
