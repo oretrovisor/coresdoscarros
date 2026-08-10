@@ -192,6 +192,21 @@ export function modelsForYear(year) {
   return MODELS.filter((m) => year >= m.from && year <= m.to).map((m) => m.name);
 }
 
+// Coverage stats for the whole catalog. Entries repeated across years are
+// counted once per year. Videos are counted individually when a color has
+// more than one attached.
+export function catalogStats() {
+  let colors = 0, photos = 0, videos = 0;
+  for (const year of YEARS) {
+    for (const c of (DATA[year] || [])) {
+      colors++;
+      if (c.photo) photos++;
+      if (c.video) videos += Array.isArray(c.video) ? c.video.length : 1;
+    }
+  }
+  return { colors, photos, videos };
+}
+
 // URL-friendly slug from a color name: lowercase, no accents, hyphenated.
 export function slugify(s) {
   return s

@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamation, faInfo, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { catalogStats } from '../data';
 
 export default function Footer() {
+  const stats = catalogStats();
   return (
     <>
       {/* Callouts above the footer */}
@@ -73,6 +75,24 @@ export default function Footer() {
             </a>
             , que faz um belíssimo trabalho de preservação da memória da indústria automobilística brasileira.
           </p>
+        </div>
+      </div>
+
+      {/* Catalog progress stats */}
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-8">
+        <div className="border border-rule rounded-md grid grid-cols-3 divide-x divide-rule overflow-hidden" style={{ background: 'var(--surface-soft)' }}>
+          <div className="py-4 sm:py-5 text-center">
+            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.colors}</div>
+            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Cores</div>
+          </div>
+          <div className="py-4 sm:py-5 text-center">
+            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.videos}</div>
+            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Vídeos</div>
+          </div>
+          <div className="py-4 sm:py-5 text-center">
+            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.photos}</div>
+            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Fotos</div>
+          </div>
         </div>
       </div>
 
