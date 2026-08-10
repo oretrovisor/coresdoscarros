@@ -35,8 +35,22 @@ export default function Footer() {
   const stats = catalogStats();
   return (
     <>
+      {/* Catalog progress stats */}
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-14 sm:mt-16">
+        <div className="border border-rule rounded-md px-6 sm:px-10 py-7 sm:py-9" style={{ background: 'var(--paper)' }}>
+          <h3 className="text-center text-lg sm:text-xl font-medium mb-6 sm:mb-8" style={{ color: 'var(--ink)' }}>
+            Chrysler do Brasil
+          </h3>
+          <div className="grid gap-6 sm:grid-cols-3 sm:gap-10">
+            <StatBar value={stats.colors} label="Cores catalogadas" percent={100} tone="brand" />
+            <StatBar value={stats.photos} label="Com foto" percent={pct(stats.photos, stats.colors)} tone="cream" />
+            <StatBar value={stats.videos} label="Com vídeo" percent={pct(stats.videos, stats.colors)} tone="cream" />
+          </div>
+        </div>
+      </div>
+
       {/* Callouts above the footer */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-12 flex flex-col gap-3">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-14 sm:mt-16 flex flex-col gap-3">
         {/* Warning: provisional data */}
         <div className="callout-warning rounded-md px-4 py-3 sm:px-5 sm:py-4 flex items-start gap-3">
           <span
@@ -107,21 +121,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Catalog progress stats */}
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-8">
-        <div className="border border-rule rounded-md px-6 sm:px-10 py-7 sm:py-9" style={{ background: 'var(--paper)' }}>
-          <h3 className="text-center text-lg sm:text-xl font-medium mb-6 sm:mb-8" style={{ color: 'var(--ink)' }}>
-            Chrysler do Brasil
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-3 sm:gap-10">
-            <StatBar value={stats.colors} label="Cores catalogadas" percent={100} tone="brand" />
-            <StatBar value={stats.photos} label="Com foto" percent={pct(stats.photos, stats.colors)} tone="cream" />
-            <StatBar value={stats.videos} label="Com vídeo" percent={pct(stats.videos, stats.colors)} tone="cream" />
-          </div>
-        </div>
-      </div>
-
-      <footer className="border-t border-rule mt-6">
+      <footer className="border-t border-rule mt-12 sm:mt-14">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex flex-col items-center text-center gap-3 sm:flex-row sm:justify-between sm:text-left sm:gap-4 sm:flex-wrap">
           <div
             className="font-mono text-[10.5px] tracking-[0.18em] uppercase"
