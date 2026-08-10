@@ -199,15 +199,15 @@ export const YEAR_NOTES = {
 };
 
 // Coverage stats for the whole catalog. Entries repeated across years are
-// counted once per year. Videos are counted individually when a color has
-// more than one attached.
+// counted once per year. `photos`/`videos` count colors that HAVE at least
+// one photo/video (not total assets), so the ratios are meaningful.
 export function catalogStats() {
   let colors = 0, photos = 0, videos = 0;
   for (const year of YEARS) {
     for (const c of (DATA[year] || [])) {
       colors++;
       if (c.photo) photos++;
-      if (c.video) videos += Array.isArray(c.video) ? c.video.length : 1;
+      if (c.video) videos++;
     }
   }
   return { colors, photos, videos };

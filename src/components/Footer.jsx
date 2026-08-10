@@ -2,6 +2,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamation, faInfo, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { catalogStats } from '../data';
 
+function pct(n, total) {
+  if (!total) return 0;
+  return Math.round((n / total) * 100);
+}
+
+function StatBar({ value, label, percent, tone }) {
+  const fill = tone === 'brand' ? '#1F7770' : '#ECE1A8';
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-3 mb-2">
+        <div className="min-w-0 flex items-baseline gap-2">
+          <span className="font-mono text-[14px] font-semibold tabular-nums" style={{ color: 'var(--ink)' }}>
+            {value}
+          </span>
+          <span className="font-mono text-[10.5px] tracking-[0.18em] uppercase truncate" style={{ color: 'var(--muted)' }}>
+            {label}
+          </span>
+        </div>
+        <span className="font-mono text-[10.5px] tabular-nums shrink-0" style={{ color: 'var(--muted)' }}>
+          {percent}%
+        </span>
+      </div>
+      <div className="h-2 rounded-full overflow-hidden" style={{ background: '#EFEFEF' }}>
+        <div className="h-full rounded-full transition-all" style={{ background: fill, width: `${percent}%` }} />
+      </div>
+    </div>
+  );
+}
+
 export default function Footer() {
   const stats = catalogStats();
   return (
@@ -80,18 +109,14 @@ export default function Footer() {
 
       {/* Catalog progress stats */}
       <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-8">
-        <div className="border border-rule rounded-md grid grid-cols-3 divide-x divide-rule overflow-hidden" style={{ background: 'var(--surface-soft)' }}>
-          <div className="py-8 sm:py-10 text-center">
-            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.colors}</div>
-            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Cores</div>
-          </div>
-          <div className="py-8 sm:py-10 text-center">
-            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.videos}</div>
-            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Vídeos</div>
-          </div>
-          <div className="py-8 sm:py-10 text-center">
-            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.photos}</div>
-            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Fotos</div>
+        <div className="border border-rule rounded-md px-6 sm:px-10 py-7 sm:py-9" style={{ background: 'var(--paper)' }}>
+          <h3 className="text-center text-lg sm:text-xl font-medium mb-6 sm:mb-8" style={{ color: 'var(--ink)' }}>
+            Chrysler do Brasil
+          </h3>
+          <div className="grid gap-6 sm:grid-cols-3 sm:gap-10">
+            <StatBar value={stats.colors} label="Cores catalogadas" percent={100} tone="brand" />
+            <StatBar value={stats.photos} label="Com foto" percent={pct(stats.photos, stats.colors)} tone="cream" />
+            <StatBar value={stats.videos} label="Com vídeo" percent={pct(stats.videos, stats.colors)} tone="cream" />
           </div>
         </div>
       </div>
