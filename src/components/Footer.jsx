@@ -81,17 +81,17 @@ export default function Footer() {
       {/* Catalog progress stats */}
       <div className="max-w-6xl mx-auto px-5 sm:px-8 mt-8">
         <div className="border border-rule rounded-md grid grid-cols-3 divide-x divide-rule overflow-hidden" style={{ background: 'var(--surface-soft)' }}>
-          <div className="py-4 sm:py-5 text-center">
-            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.colors}</div>
-            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Cores</div>
+          <div className="py-8 sm:py-10 text-center">
+            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.colors}</div>
+            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Cores</div>
           </div>
-          <div className="py-4 sm:py-5 text-center">
-            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.videos}</div>
-            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Vídeos</div>
+          <div className="py-8 sm:py-10 text-center">
+            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.videos}</div>
+            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Vídeos</div>
           </div>
-          <div className="py-4 sm:py-5 text-center">
-            <div className="text-[22px] sm:text-[26px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.photos}</div>
-            <div className="mt-1.5 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Fotos</div>
+          <div className="py-8 sm:py-10 text-center">
+            <div className="font-mono text-[16px] sm:text-[18px] font-medium leading-none" style={{ color: 'var(--ink)' }}>{stats.photos}</div>
+            <div className="mt-2 font-mono text-[10.5px] tracking-[0.18em] uppercase" style={{ color: 'var(--muted)' }}>Fotos</div>
           </div>
         </div>
       </div>

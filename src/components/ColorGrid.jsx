@@ -59,9 +59,19 @@ export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
           {colors.length} cores
         </span>
       </div>
+      <div className="grid grid-cols-1 gap-2.5">
+        {colors.map((c, i) => (
+          <ColorCard
+            key={c.name + i}
+            color={c}
+            selected={i === selectedIndex}
+            onSelect={() => onSelect(i)}
+          />
+        ))}
+      </div>
       {note && (
         <div
-          className="callout-info rounded-md px-3 py-2.5 mb-3 flex items-start gap-2.5 text-[12.5px] leading-relaxed"
+          className="callout-info rounded-md px-3 py-2.5 mt-3 flex items-start gap-2.5 text-[12.5px] leading-relaxed"
         >
           <span
             aria-hidden="true"
@@ -73,16 +83,6 @@ export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
           <span>{note}</span>
         </div>
       )}
-      <div className="grid grid-cols-1 gap-2.5">
-        {colors.map((c, i) => (
-          <ColorCard
-            key={c.name + i}
-            color={c}
-            selected={i === selectedIndex}
-            onSelect={() => onSelect(i)}
-          />
-        ))}
-      </div>
     </section>
   );
 }
