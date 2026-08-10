@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faVideo, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { YEAR_NOTES } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 
 function ColorCard({ color, selected, onSelect }) {
@@ -47,6 +48,7 @@ function ColorCard({ color, selected, onSelect }) {
 }
 
 export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
+  const note = YEAR_NOTES[year];
   return (
     <section>
       <div className="flex items-baseline justify-between mb-3">
@@ -57,6 +59,20 @@ export default function ColorGrid({ year, colors, selectedIndex, onSelect }) {
           {colors.length} cores
         </span>
       </div>
+      {note && (
+        <div
+          className="callout-info rounded-md px-3 py-2.5 mb-3 flex items-start gap-2.5 text-[12.5px] leading-relaxed"
+        >
+          <span
+            aria-hidden="true"
+            className="mt-0.5 inline-flex items-center justify-center w-4 h-4 rounded-full shrink-0"
+            style={{ background: '#C9DCEB', color: '#2C4A6B' }}
+          >
+            <FontAwesomeIcon icon={faInfo} style={{ fontSize: 8 }} />
+          </span>
+          <span>{note}</span>
+        </div>
+      )}
       <div className="grid grid-cols-1 gap-2.5">
         {colors.map((c, i) => (
           <ColorCard

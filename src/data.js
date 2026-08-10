@@ -192,6 +192,12 @@ export function modelsForYear(year) {
   return MODELS.filter((m) => year >= m.from && year <= m.to).map((m) => m.name);
 }
 
+// Optional per-year notes shown at the top of the palette column.
+export const YEAR_NOTES = {
+  1972:
+    'Nos últimos 1500 carros aproximadamente da linha 1972, a Chrysler alternou cores da linha 72 com cores da linha 73.',
+};
+
 // Coverage stats for the whole catalog. Entries repeated across years are
 // counted once per year. Videos are counted individually when a color has
 // more than one attached.
