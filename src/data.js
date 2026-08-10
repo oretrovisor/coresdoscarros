@@ -195,7 +195,7 @@ export function modelsForYear(year) {
 // Optional per-year notes shown at the top of the palette column.
 export const YEAR_NOTES = {
   1972:
-    'Nos últimos 1500 carros aproximadamente da linha 1972, a Chrysler alternou cores da linha 72 com cores da linha 73.',
+    'Nos últimos 1.500 carros (aproximadamente) da linha 1972, a Chrysler alternou entre cores das linhas 1972 e 1973.',
 };
 
 // Coverage stats for the whole catalog. Entries repeated across years are

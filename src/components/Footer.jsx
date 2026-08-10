@@ -7,7 +7,7 @@ function pct(n, total) {
   return Math.round((n / total) * 100);
 }
 
-function StatBar({ value, label, percent, tone }) {
+function StatBar({ value, label, percent, tone, showPercent = true }) {
   const fill = tone === 'brand' ? '#1F7770' : '#ECE1A8';
   return (
     <div>
@@ -20,9 +20,11 @@ function StatBar({ value, label, percent, tone }) {
             {label}
           </span>
         </div>
-        <span className="font-mono text-[10.5px] tabular-nums shrink-0" style={{ color: 'var(--muted)' }}>
-          {percent}%
-        </span>
+        {showPercent && (
+          <span className="font-mono text-[10.5px] tabular-nums shrink-0" style={{ color: 'var(--muted)' }}>
+            {percent}%
+          </span>
+        )}
       </div>
       <div className="h-2 rounded-full overflow-hidden" style={{ background: '#EFEFEF' }}>
         <div className="h-full rounded-full transition-all" style={{ background: fill, width: `${percent}%` }} />
@@ -42,7 +44,7 @@ export default function Footer() {
             Chrysler do Brasil
           </h3>
           <div className="grid gap-6 sm:grid-cols-3 sm:gap-10">
-            <StatBar value={stats.colors} label="Cores catalogadas" percent={100} tone="brand" />
+            <StatBar value={stats.colors} label="Cores catalogadas" percent={100} tone="brand" showPercent={false} />
             <StatBar value={stats.photos} label="Com foto" percent={pct(stats.photos, stats.colors)} tone="cream" />
             <StatBar value={stats.videos} label="Com vídeo" percent={pct(stats.videos, stats.colors)} tone="cream" />
           </div>
