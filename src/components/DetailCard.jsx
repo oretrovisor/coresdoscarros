@@ -154,6 +154,12 @@ export default function DetailCard({ color, year, onShare }) {
   const videoIds = color.video
     ? (Array.isArray(color.video) ? color.video : [color.video])
     : [];
+  const photos = color.photo
+    ? (Array.isArray(color.photo) ? color.photo : [color.photo])
+    : [];
+  const photoCaptions = Array.isArray(color.photoCaption)
+    ? color.photoCaption
+    : Array(photos.length).fill(color.photoCaption);
 
   return (
     <article
@@ -210,14 +216,17 @@ export default function DetailCard({ color, year, onShare }) {
             </ul>
           </section>
 
-          {/* Right: photo */}
+          {/* Right: photo(s) */}
           <div className="flex flex-col gap-4">
-            {color.photo ? (
-              <PhotoEmbed
-                src={`${import.meta.env.BASE_URL}photos/${color.photo}`}
-                alt={color.photoCaption || `${color.name} — ${year}`}
-                caption={color.photoCaption}
-              />
+            {photos.length > 0 ? (
+              photos.map((p, i) => (
+                <PhotoEmbed
+                  key={p}
+                  src={`${import.meta.env.BASE_URL}photos/${p}`}
+                  alt={photoCaptions[i] || `${color.name} — ${year}`}
+                  caption={photoCaptions[i]}
+                />
+              ))
             ) : (
               <PhotoPlaceholder />
             )}

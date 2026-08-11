@@ -51,6 +51,19 @@ After adding a photo here, set `photo` **and** `photoCaption` on that color's en
   photoCaption: "1971 Dodge Charger R/T Amarelo Boreal" },
 ```
 
+Multiple photos of the same color? Use an array. Use a suffix like `-front`, `-rear`, `-side` on the filenames:
+
+```js
+{ code: "BGY5", name: "AMARELO BOREAL", hex: "#DE5C1E",
+  photo: [
+    "1971-dodge-charger-rt-amarelo-boreal-front.jpg",
+    "1971-dodge-charger-rt-amarelo-boreal-rear.jpg",
+  ],
+  photoCaption: "1971 Dodge Charger R/T Amarelo Boreal" },
+```
+
+`photoCaption` can be a single string (shared across all photos) or an array with one caption per photo.
+
 ### Caption format
 
 Captions appear small and italicized below the photo. Follow this template:
