@@ -23,19 +23,22 @@ Examples:
 - `1970-dodge-dart-seda-verde-imperial.jpg`
 - `1972-dodge-charger-rt-branco-polar.jpg`
 
-## Size
+## Size & aspect
 
 Every photo is normalized before commit:
 
-- **Max width or height: 1600 px** (whichever is larger; aspect ratio preserved)
-- **JPEG quality: 85** (mozjpeg encoder for smaller files)
-- Never enlarge — if the source is already smaller, leave it as-is
-- Target file size: keep under ~500 KB when possible
+- **Fixed aspect ratio: 3 : 2 landscape** — the same aspect as the site's thumbnail, so there is no letterbox in the lightbox.
+- **Fixed dimensions: 1600 × 1067 px** (or scaled to that with center crop when needed).
+- **JPEG quality: 85** (mozjpeg encoder for smaller files).
+- Convert `.webp`, `.png`, `.heic`, etc. before saving.
+- Target file size: under ~500 KB.
+
+`fit: 'cover'` crops from center by default. If the important subject sits off-center in the source, pick a different `position` (`'north'`, `'south'`, `'east'`, `'west'`, or a `left,top` object) so the car stays in frame.
 
 Quick command using [sharp](https://sharp.pixelplumbing.com/) (installed on demand):
 
 ```bash
-node -e "require('sharp')('SOURCE').resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).jpeg({quality:85,mozjpeg:true}).toFile('public/photos/FILENAME.jpg')"
+node -e "require('sharp')('SOURCE').resize({width:1600,height:1067,fit:'cover',position:'center'}).jpeg({quality:85,mozjpeg:true}).toFile('public/photos/FILENAME.jpg')"
 ```
 
 ## Wiring it up
