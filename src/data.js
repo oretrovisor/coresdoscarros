@@ -138,7 +138,7 @@ export const DATA = {
     { code: "SA2", name: "CINZA BÁLTICO",                        hex: "#8E8E8A" },
     { code: "PR1", name: "CINZA BÁLTICO / PRETO BAIXO BRILHO",   hex: "#5A5A56", models: ["Magnum"] },
     { code: "ST5", name: "MARROM SUMATRA",                       hex: "#5A3A26", video: "ipODYYRq0js" },
-    { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#8A6A4A", models: ["Magnum"] },
+    { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#B0693A", models: ["Magnum"], photo: "1979-dodge-magnum-marrom-sumatra-bege-cashmere.jpg", photoCaption: "1979 Dodge Magnum Marrom Sumatra / Bege Cashmere" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A" },
     { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22", video: "IdcdeJt9ZcY" },
   ],
