@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage, faXmark, faShareNodes } from '@fortawesome/free-solid-svg-icons';
-import { modelsForYear } from '../data';
+import { modelsForYear, swatchBackground } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 import InfoBadge from './InfoBadge';
 
@@ -171,7 +171,7 @@ export default function DetailCard({ color, year, onShare }) {
       <div
         className="relative p-6 sm:p-7"
         style={{
-          background: color.hex,
+          background: swatchBackground(color),
           color: light ? '#222222' : '#FFFFFF',
           borderBottom: '1px solid var(--rule)',
         }}

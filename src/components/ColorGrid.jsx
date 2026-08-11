@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faVideo, faInfo } from '@fortawesome/free-solid-svg-icons';
-import { YEAR_NOTES } from '../data';
+import { YEAR_NOTES, swatchBackground } from '../data';
 import UnconfirmedBadge from './UnconfirmedBadge';
 
 function ColorCard({ color, selected, onSelect }) {
@@ -16,7 +16,7 @@ function ColorCard({ color, selected, onSelect }) {
       <span
         aria-hidden="true"
         className="swatch-ring shrink-0 w-9 h-9 rounded-md"
-        style={{ background: color.hex }}
+        style={{ background: swatchBackground(color) }}
       />
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-1.5">

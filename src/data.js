@@ -132,13 +132,13 @@ export const DATA = {
   1979: [
     { code: "SB3", name: "AZUL CADETE",                          hex: "#4A6B8A" },
     { code: "SB9", name: "AZUL ESTELAR",                         hex: "#2A4A78", video: "YUN7m78DMCA" },
-    { code: "AZ1", name: "AZUL ESTELAR / AZUL CADETE",           hex: "#2A4A78", models: ["Magnum"] },
+    { code: "AZ1", name: "AZUL ESTELAR / AZUL CADETE",           hex: "#2A4A78", hex2: "#4A6B8A", models: ["Magnum"] },
     { code: "ST2", name: "BEGE CASHMERE",                        hex: "#D7C39A", video: "3ygY7A8-Y9M" },
     { code: "SW1", name: "BRANCO ÁRTICO",                        hex: "#F1EDE4" },
     { code: "SA2", name: "CINZA BÁLTICO",                        hex: "#8E8E8A" },
-    { code: "PR1", name: "CINZA BÁLTICO / PRETO BAIXO BRILHO",   hex: "#5A5A56", models: ["Magnum"] },
+    { code: "PR1", name: "CINZA BÁLTICO / PRETO BAIXO BRILHO",   hex: "#8E8E8A", hex2: "#1A1A1A", models: ["Magnum"] },
     { code: "ST5", name: "MARROM SUMATRA",                       hex: "#B0693A", video: "ipODYYRq0js", photo: "1979-dodge-magnum-marrom-sumatra.jpg", photoCaption: "1979 Dodge Magnum Marrom Sumatra" },
-    { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#8A6A4A", models: ["Magnum"] },
+    { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#B0693A", hex2: "#D7C39A", models: ["Magnum"] },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A" },
     { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22", video: "IdcdeJt9ZcY" },
   ],
@@ -211,6 +211,14 @@ export function catalogStats() {
     }
   }
   return { colors, photos, videos };
+}
+
+// CSS background value for a color's swatch — a diagonal split when the entry
+// has a `hex2` (two-tone paint), otherwise the solid `hex`.
+export function swatchBackground(color) {
+  return color.hex2
+    ? `linear-gradient(135deg, ${color.hex} 0 50%, ${color.hex2} 50% 100%)`
+    : color.hex;
 }
 
 // URL-friendly slug from a color name: lowercase, no accents, hyphenated.
