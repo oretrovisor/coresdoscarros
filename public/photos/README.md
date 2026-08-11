@@ -28,7 +28,7 @@ Examples:
 Every photo is normalized before commit:
 
 - **Fixed aspect ratio: 3 : 2 landscape** — the same aspect as the site's thumbnail, so there is no letterbox in the lightbox.
-- **Fixed dimensions: 1600 × 1067 px** (or scaled to that with center crop when needed).
+- **Fixed dimensions: 1800 × 1200 px** (center-crop from source; upscale if needed to hit exactly this size).
 - **JPEG quality: 85** (mozjpeg encoder for smaller files).
 - Convert `.webp`, `.png`, `.heic`, etc. before saving.
 - Target file size: under ~500 KB.
@@ -38,7 +38,7 @@ Every photo is normalized before commit:
 Quick command using [sharp](https://sharp.pixelplumbing.com/) (installed on demand):
 
 ```bash
-node -e "require('sharp')('SOURCE').resize({width:1600,height:1067,fit:'cover',position:'center'}).jpeg({quality:85,mozjpeg:true}).toFile('public/photos/FILENAME.jpg')"
+node -e "require('sharp')('SOURCE').resize({width:1800,height:1200,fit:'cover',position:'center'}).jpeg({quality:85,mozjpeg:true}).toFile('public/photos/FILENAME.jpg')"
 ```
 
 ## Wiring it up
