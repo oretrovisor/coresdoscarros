@@ -1,24 +1,42 @@
 # Photos
 
-Drop car photos here following this filename convention:
+Drop car photos here following the filename **and** the size convention below.
+
+## Filename
 
 ```
 YEAR-model-paint-name.jpg
 ```
 
-## Rules
+Rules:
 
 - **All lowercase**
 - **Hyphens between words** — no spaces, no underscores
 - **No accents** (use `amarelo-boreal`, not `amarelo-bóreal`)
 - **No special characters** — `/`, `,`, `.` etc. get dropped
-- `R/T` becomes `rt`; `MET.` becomes `metalico`
+- `R/T` becomes `rt`; `MET.` becomes `metalico`; `Sedã` becomes `seda`
+- Always `.jpg` (convert `.webp`, `.png`, `.heic` etc. before saving)
 
-## Examples
+Examples:
 
 - `1971-dodge-charger-rt-amarelo-boreal.jpg`
-- `1974-dodge-dart-ocre-amarelo-barroco.jpg`
-- `1972-dodge-charger-marrom-castanha-metalico.jpg`
+- `1970-dodge-dart-seda-verde-imperial.jpg`
+- `1972-dodge-charger-rt-branco-polar.jpg`
+
+## Size
+
+Every photo is normalized before commit:
+
+- **Max width or height: 1600 px** (whichever is larger; aspect ratio preserved)
+- **JPEG quality: 85** (mozjpeg encoder for smaller files)
+- Never enlarge — if the source is already smaller, leave it as-is
+- Target file size: keep under ~500 KB when possible
+
+Quick command using [sharp](https://sharp.pixelplumbing.com/) (installed on demand):
+
+```bash
+node -e "require('sharp')('SOURCE').resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).jpeg({quality:85,mozjpeg:true}).toFile('public/photos/FILENAME.jpg')"
+```
 
 ## Wiring it up
 

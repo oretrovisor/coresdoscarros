@@ -11,7 +11,7 @@ export const DATA = {
     { code: "BEA9", name: "AZUL PROFUNDO Metálico", hex: "#1E3050" },
     { code: "BEW2", name: "BRANCO POLAR",          hex: "#EEF1F2" },
     { code: "BEP9", name: "PRETO FORMAL",          hex: "#1A1A1A" },
-    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#3D5E44", video: "KtUNxnks-f8" },
+    { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#3D5E44", video: "KtUNxnks-f8", photo: "1970-dodge-dart-seda-verde-imperial.jpg", photoCaption: "1970 Dodge Dart Sedã Verde Imperial" },
   ],
   1971: [
     { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#DE5C1E", models: ["Charger R/T"], video: "J5uxLHuhZQo" },
