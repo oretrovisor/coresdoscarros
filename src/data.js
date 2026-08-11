@@ -61,7 +61,7 @@ export const DATA = {
     { code: "M8",  name: "MARROM ESCURO PILÃO",       hex: "#4A2E1E" },
     { code: "P9A", name: "PRETO TURANDOT",            hex: "#1A1A1A" },
     { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E", video: "76FRewBrnOE" },
-    { code: "G4",  name: "VERDE FLORESTA",            hex: "#5A7A45", video: ["cJNf9qjSSqw", "BbQs44QpJI0"] },
+    { code: "G4",  name: "VERDE FLORESTA",            hex: "#B0D63A", video: ["cJNf9qjSSqw", "BbQs44QpJI0"], photo: "1973-dodge-dart-se-verde-floresta.jpg", photoCaption: "1973 Dodge Dart SE Verde Floresta" },
     { code: "G5",  name: "VERDE MEDIO AMAZONAS",      hex: "#356B48" },
     { code: "R4A", name: "VERMELHO CLARO / INDIO",    hex: "#CC2A22", photo: "1973-dodge-charger-rt-vermelho-indio.jpg", photoCaption: "1973 Dodge Charger R/T Vermelho Índio" },
     { code: "R9",  name: "VERMELHO ESCURO CARDEAL",   hex: "#6E1A22" },
