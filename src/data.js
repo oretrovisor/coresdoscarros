@@ -69,7 +69,7 @@ export const DATA = {
     { code: "R3",  name: "VERMELHO TUDOR",            hex: "#8C1E22" },
   ],
   1974: [
-    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",      hex: "#DCD23A", video: "F6XKeqhpCMA" },
+    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",      hex: "#F0D42A", video: ["F6XKeqhpCMA", "0qUzlJqm2Mg"], photo: "1974-dodge-charger-rt-amarelo-enxofre-citrico.jpg", photoCaption: "1974 Dodge Charger R/T Amarelo Enxofre Cítrico" },
     { code: "A5",  name: "AZUL CLARO MARUJO",            hex: "#6E95B8", unconfirmed: true },
     { code: "B7",  name: "AZUL ESCURO BAHAMA",           hex: "#1E3050" },
     { code: "W2",  name: "BRANCO IPANEMA",               hex: "#F1EDE4", video: "H0k6sKMbrX4" },
