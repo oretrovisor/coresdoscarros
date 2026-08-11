@@ -72,7 +72,7 @@ export const DATA = {
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",      hex: "#F0D42A", video: ["F6XKeqhpCMA", "0qUzlJqm2Mg"], photo: "1974-dodge-charger-rt-amarelo-enxofre-citrico.jpg", photoCaption: "1974 Dodge Charger R/T Amarelo Enxofre Cítrico" },
     { code: "A5",  name: "AZUL CLARO MARUJO",            hex: "#6E95B8", unconfirmed: true },
     { code: "B7",  name: "AZUL ESCURO BAHAMA",           hex: "#1E3050" },
-    { code: "W2",  name: "BRANCO IPANEMA",               hex: "#F1EDE4", video: ["H0k6sKMbrX4", "svBkPHgrIXU"] },
+    { code: "W2",  name: "BRANCO IPANEMA",               hex: "#F1EDE4", video: ["H0k6sKMbrX4", "svBkPHgrIXU", "n6MIkYQ7uVo"], photo: "1974-dodge-dart-se-branco-ipanema.jpg", photoCaption: "1974 Dodge Dart SE Branco Ipanema" },
     { code: "T4",  name: "BRONZE CASTANHO BRILHANTE",    hex: "#7A5A2E" },
     { code: "A6B", name: "CINZA PLATINA",                hex: "#B8B5AD" },
     { code: "T9",  name: "MARROM CLÁSSICO",              hex: "#5A3A26" },
