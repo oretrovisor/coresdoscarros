@@ -63,7 +63,7 @@ export const DATA = {
     { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E", video: "76FRewBrnOE" },
     { code: "G4",  name: "VERDE FLORESTA",            hex: "#5A7A45", video: ["cJNf9qjSSqw", "BbQs44QpJI0"] },
     { code: "G5",  name: "VERDE MEDIO AMAZONAS",      hex: "#356B48" },
-    { code: "R4A", name: "VERMELHO CLARO / INDIO",    hex: "#B0382A" },
+    { code: "R4A", name: "VERMELHO CLARO / INDIO",    hex: "#CC2A22", photo: "1973-dodge-charger-rt-vermelho-indio.jpg", photoCaption: "1973 Dodge Charger R/T Vermelho Índio" },
     { code: "R9",  name: "VERMELHO ESCURO CARDEAL",   hex: "#6E1A22" },
     { code: "R5",  name: "VERMELHO MEDIO NASCENTE",   hex: "#9A2418", video: "ehYtmvbY_cA" },
     { code: "R3",  name: "VERMELHO TUDOR",            hex: "#8C1E22" },
