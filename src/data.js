@@ -32,7 +32,7 @@ export const DATA = {
   ],
   1972: [
     { code: "Y5",  name: "AMARELO BOREAL",            hex: "#DE5C1E" },
-    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
+    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#F0D42A" },
     { code: "A5",  name: "AZUL ABAETÉ Metálico",      hex: "#2E4A6B" },
     { code: "A7",  name: "AZUL NAUTICO Metálico",     hex: "#2A5278" },
     { code: "W3",  name: "BRANCO POLAR",              hex: "#EEF1F2", photo: "1972-dodge-charger-rt-branco-polar.jpg", photoCaption: "1972 Dodge Charger R/T Branco Polar" },
@@ -51,7 +51,7 @@ export const DATA = {
     { code: "R6",  name: "VERMELHO XAVANTE",          hex: "#B02824", video: "j_BkA1bBLUU", photo: "1972-dodge-charger-rt-vermelho-xavante.jpg", photoCaption: "1972 Dodge Charger R/T Vermelho Xavante" },
   ],
   1973: [
-    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#DCD23A" },
+    { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#F0D42A" },
     { code: "A6A", name: "AZUL GUAÍBA",               hex: "#3A6F95" },
     { code: "W2",  name: "BRANCO ESPUMA MARINHA",     hex: "#E5ECF2", video: "Dtfr6xtnsYU" },
     { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4" },
