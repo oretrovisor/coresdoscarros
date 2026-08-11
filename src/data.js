@@ -144,7 +144,7 @@ export const DATA = {
   ],
   1980: [
     { code: "SB3",     name: "AZUL CADETE",                hex: "#4A6B8A" },
-    { code: "TB2/TC2", name: "AZUL GEADA",                 hex: "#8EA8C2" },
+    { code: "TB2/TC2", name: "AZUL GEADA",                 hex: "#8EA8C2", photo: "1980-dodge-charger-rt-azul-geada.jpg", photoCaption: "1980 Dodge Charger R/T Azul Geada" },
     { code: "TT4",     name: "BEGE/CASTANHO CAMURÇA",      hex: "#B89A6E" },
     { code: "SW1",     name: "BRANCO ÁRTICO",              hex: "#F1EDE4" },
     { code: "TA4",     name: "CINZA POLY",                 hex: "#9A9A95" },
