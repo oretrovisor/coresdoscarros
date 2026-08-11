@@ -94,7 +94,7 @@ export const DATA = {
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
     { code: "LF2", name: "VERDE AUSTRÍACO",           hex: "#2F4A35", unconfirmed: true },
     { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32", video: "2w48N7qHevc" },
-    { code: "LR7", name: "VERMELHO AZTECA",           hex: "#A8474A", video: "a4cbli2ObYU" },
+    { code: "LR7", name: "VERMELHO AZTECA",           hex: "#711E2A", video: "a4cbli2ObYU", photo: "1975-dodge-charger-rt-vermelho-azteca.jpg", photoCaption: "1975 Dodge Charger R/T Vermelho Azteca" },
     { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#D8392B", photo: "1975-dodge-charger-rt-vermelho-dinastia.jpg", photoCaption: "1975 Dodge Charger R/T Vermelho Dinastia" },
   ],
   1976: [
