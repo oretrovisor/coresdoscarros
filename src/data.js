@@ -47,7 +47,7 @@ export const DATA = {
     { code: "V7",  name: "VERDE IGARAPÉ Metálico",    hex: "#2A7F72", video: "B7H_c6TpQeM", photo: "1972-dodge-charger-rt-verde-igarape-metalico.jpg", photoCaption: "1972 Dodge Charger R/T Verde Igarapé Metálico" },
     { code: "V4",  name: "VERDE MINUANO",             hex: "#4A6B45" },
     { code: "V2",  name: "VERDE TROPICAL",            hex: "#A6D24F", models: ["Charger R/T"] },
-    { code: "R4",  name: "VERMELHO ETRUSCO",          hex: "#8C1E22" },
+    { code: "R4",  name: "VERMELHO ETRUSCO",          hex: "#C82822" },
     { code: "R6",  name: "VERMELHO XAVANTE",          hex: "#B02824", video: "j_BkA1bBLUU", photo: "1972-dodge-charger-rt-vermelho-xavante.jpg", photoCaption: "1972 Dodge Charger R/T Vermelho Xavante" },
   ],
   1973: [
@@ -80,7 +80,7 @@ export const DATA = {
     { code: "P9A", name: "PRETO TURANDOT",               hex: "#1A1A1A", video: "mOiN7QtI15w", photo: ["1974-dodge-charger-ls-preto-turandot-front.jpg", "1974-dodge-charger-ls-preto-turandot-rear.jpg"], photoCaption: "1974 Dodge Charger LS Preto Turandot" },
     { code: "G9",  name: "VERDE CORDOBA",                hex: "#3A5A3A" },
     { code: "G6",  name: "VERDE SILVESTRE",              hex: "#4A6B3A" },
-    { code: "R4A", name: "VERMELHO CLARO / INDIO",       hex: "#B0382A" },
+    { code: "R4A", name: "VERMELHO CLARO / INDIO",       hex: "#CC2A22" },
     { code: "R3A", name: "VERMELHO TUDOR",               hex: "#8C1E22" },
   ],
   1975: [
@@ -106,7 +106,7 @@ export const DATA = {
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
     { code: "MQ4", name: "TURQUESA MONACO",           hex: "#2E8A8E" },
     { code: "MF2", name: "VERDE JADE",                hex: "#3F7560" },
-    { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#7D1C2E" },
+    { code: "LR3", name: "VERMELHO DINASTIA",         hex: "#D8392B" },
     { code: "ME9", name: "VERMELHO VENEZA",           hex: "#8C1E22" },
   ],
   1977: [
