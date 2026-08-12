@@ -161,7 +161,7 @@ export const DATA = {
     { code: "L8C", name: "MARROM AVELÃ",              hex: "#8A6A4A" },
     { code: "L8B", name: "MARROM CAFÉ",               hex: "#4A2E1E", video: "Cu0tcJnH3XA" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "H0SYvge5fY0" },
-    { code: "L6A", name: "VERDE TURMALINA",           hex: "#2D6A4A" },
+    { code: "L6A", name: "VERDE TURMALINA",           hex: "#7E9578", video: "5fV6Jdq3B-U", photo: "1981-dodge-dart-seda-verde-turmalina.jpg", photoCaption: "1981 Dodge Dart Sedã Verde Turmalina" },
     { code: "L3A", name: "VERMELHO CALIPSO",          hex: "#9A2418" },
   ],
 };
