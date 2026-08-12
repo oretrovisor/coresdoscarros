@@ -72,7 +72,7 @@ export const DATA = {
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",      hex: "#F0D42A", video: ["F6XKeqhpCMA", "0qUzlJqm2Mg"], photo: "1974-dodge-charger-rt-amarelo-enxofre-citrico.jpg", photoCaption: "1974 Dodge Charger R/T Amarelo Enxofre Cítrico" },
     { code: "A5",  name: "AZUL CLARO MARUJO",            hex: "#6E95B8", unconfirmed: true },
     { code: "B7",  name: "AZUL ESCURO BAHAMA",           hex: "#1E3050" },
-    { code: "W2",  name: "BRANCO IPANEMA",               hex: "#F1EDE4", video: ["H0k6sKMbrX4", "svBkPHgrIXU"] },
+    { code: "W2",  name: "BRANCO IPANEMA",               hex: "#F1EDE4", video: ["H0k6sKMbrX4", "svBkPHgrIXU"], photo: "1974-dodge-charger-ls-branco-ipanema.jpg", photoCaption: "1974 Dodge Charger LS Branco Ipanema" },
     { code: "T4",  name: "BRONZE CASTANHO BRILHANTE",    hex: "#7A5A2E" },
     { code: "A6B", name: "CINZA PLATINA",                hex: "#B8B5AD" },
     { code: "T9",  name: "MARROM CLÁSSICO",              hex: "#5A3A26" },
@@ -84,7 +84,7 @@ export const DATA = {
     { code: "R3A", name: "VERMELHO TUDOR",               hex: "#8C1E22" },
   ],
   1975: [
-    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842", video: ["i-uJUbtuUOM", "7dqOyW6Hyug"] },
+    { code: "LY3", name: "AMARELO MONTEGO",           hex: "#E8B842", video: ["i-uJUbtuUOM", "7dqOyW6Hyug"], photo: "1975-dodge-charger-ls-amarelo-montego.jpg", photoCaption: "1975 Dodge Charger LS Amarelo Montego" },
     { code: "LB7", name: "AZUL MEIA NOITE",           hex: "#1F2F50" },
     { code: "LB6", name: "AZUL VITÓRIA",              hex: "#2E4A6B", unconfirmed: true },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
@@ -112,7 +112,7 @@ export const DATA = {
   1977: [
     { code: "NT2", name: "BEGE INDIANO",              hex: "#CDB88A" },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6", video: "lLI48780iCI" },
-    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#6A4527" },
+    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#AF9440" },
     { code: "MY9", name: "MARROM IGUAÇU",             hex: "#5A3A26" },
     { code: "MA2", name: "PRATA MONTEREY",            hex: "#B8B5AD" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "unPjhMC_QXY" },
