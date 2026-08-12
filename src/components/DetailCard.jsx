@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage, faXmark, faShareNodes } from '@fortawesome/free-solid-svg-icons';
-import { modelsForYear, swatchBackground } from '../data';
-import UnconfirmedBadge from './UnconfirmedBadge';
-import InfoBadge from './InfoBadge';
+import { faImage, faXmark, faShareNodes, faQuestion, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { modelsForYear, swatchBackground, toArray } from '../data';
+import Badge from './Badge';
 
 function isLight(hex) {
   const h = hex.replace('#', '');
@@ -151,12 +150,8 @@ export default function DetailCard({ color, year, onShare }) {
 
   const light = isLight(color.hex);
   const models = color.models ?? modelsForYear(year);
-  const videoIds = color.video
-    ? (Array.isArray(color.video) ? color.video : [color.video])
-    : [];
-  const photos = color.photo
-    ? (Array.isArray(color.photo) ? color.photo : [color.photo])
-    : [];
+  const videoIds = toArray(color.video);
+  const photos = toArray(color.photo);
   const photoCaptions = Array.isArray(color.photoCaption)
     ? color.photoCaption
     : Array(photos.length).fill(color.photoCaption);
@@ -182,7 +177,7 @@ export default function DetailCard({ color, year, onShare }) {
         </div>
         <h3 className="text-2xl sm:text-3xl leading-tight tracking-tight font-medium flex items-center flex-wrap gap-x-2.5 gap-y-1">
           <span>{color.name}</span>
-          {color.unconfirmed && <UnconfirmedBadge className="w-5 h-5" style={{ fontSize: '12px' }} />}
+          {color.unconfirmed && <Badge icon={faQuestion} label="Não confirmado" className="w-5 h-5" style={{ fontSize: '12px' }} />}
           {onShare && (
             <button
               type="button"
@@ -205,7 +200,7 @@ export default function DetailCard({ color, year, onShare }) {
           <section>
             <h4 className="font-mono text-[11px] tracking-[0.18em] uppercase mb-3 flex items-center gap-1.5" style={{ color: 'var(--muted)' }}>
               Modelos que usavam esta cor
-              <InfoBadge text="Informações não oficiais — podem conter imprecisões." />
+              <Badge icon={faInfo} label="Informações não oficiais — podem conter imprecisões." wide />
             </h4>
             <ul className="divide-y divide-rule border-t border-b border-rule">
               {models.map((m) => (

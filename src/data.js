@@ -221,6 +221,12 @@ export function swatchBackground(color) {
     : color.hex;
 }
 
+// Normalize a field that may be a single value, an array, or absent into an array.
+export function toArray(value) {
+  if (value == null) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
 // URL-friendly slug from a color name: lowercase, no accents, hyphenated.
 export function slugify(s) {
   return s

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera, faVideo, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faVideo, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { YEAR_NOTES, swatchBackground } from '../data';
-import UnconfirmedBadge from './UnconfirmedBadge';
+import Badge from './Badge';
 
 function ColorCard({ color, selected, onSelect }) {
   const hasMedia = color.photo || color.video;
@@ -23,7 +23,7 @@ function ColorCard({ color, selected, onSelect }) {
           <span className="text-[14.5px] font-medium leading-snug" style={{ color: 'var(--ink)' }}>
             {color.name}
           </span>
-          {color.unconfirmed && <UnconfirmedBadge style={{ color: 'var(--muted)' }} />}
+          {color.unconfirmed && <Badge icon={faQuestion} label="Não confirmado" style={{ color: 'var(--muted)' }} />}
         </span>
         <span className="block font-mono text-[10.5px] tracking-wider mt-0.5" style={{ color: 'var(--muted)' }}>
           {color.code}

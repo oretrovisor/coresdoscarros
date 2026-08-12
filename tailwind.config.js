@@ -7,21 +7,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'system-ui', 'sans-serif'],
+        // Overrides Tailwind's default font-mono utility (used ~18x across the app).
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        script: ['"Luxurious Script"', 'cursive'],
       },
       colors: {
-        brand: {
-          DEFAULT: '#1F7770',
-          dark: '#17615b',
-          light: '#ECE1A8',
-        },
-        ink: '#222222',
-        paper: '#FFFFFF',
-        surface: '#FAFAFA',
+        // Only 'rule' is referenced via Tailwind utilities (border-rule, divide-rule).
+        // Other design tokens (ink/paper/surface/muted/brand) are applied via the
+        // CSS custom properties in index.css instead — see :root there.
         rule: '#DDDDDD',
-        muted: '#777777',
       },
     },
   },
