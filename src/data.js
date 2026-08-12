@@ -91,7 +91,7 @@ export const DATA = {
     { code: "LT2", name: "CASTANHO CORSA",            hex: "#C97632", video: "vawQ64D4kvo", photo: "1975-dodge-charger-rt-castanho-corsa.jpg", photoCaption: "1975 Dodge Charger R/T Castanho Corsa" },
     { code: "LT9", name: "MARROM CLÁSSICO",           hex: "#5A3A26" },
     { code: "LS2", name: "PRATA LUNAR",               hex: "#B8B5AD" },
-    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "JPE7EeCHWWY", photo: ["1975-dodge-charger-rt-preto-baixo-brilho-front.jpg", "1975-dodge-charger-rt-preto-baixo-brilho-rear.jpg"], photoCaption: "1975 Dodge Charger R/T Preto Baixo Brilho / Ônix" },
+    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: ["JPE7EeCHWWY", "Exbbo_CyMMQ"], photo: ["1975-dodge-charger-rt-preto-baixo-brilho-1.jpg", "1975-dodge-charger-rt-preto-baixo-brilho-2.jpg", "1975-dodge-charger-rt-preto-baixo-brilho-3.jpg", "1975-dodge-charger-rt-preto-baixo-brilho-4.jpg"], photoCaption: "1975 Dodge Charger R/T Preto Baixo Brilho / Ônix" },
     { code: "LF2", name: "VERDE AUSTRÍACO",           hex: "#2F4A35", unconfirmed: true },
     { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32", video: "2w48N7qHevc" },
     { code: "LR7", name: "VERMELHO AZTECA",           hex: "#711E2A", video: "a4cbli2ObYU", photo: ["1975-dodge-charger-rt-vermelho-azteca-front.jpg", "1975-dodge-charger-rt-vermelho-azteca-rear.jpg"], photoCaption: "1975 Dodge Charger R/T Vermelho Azteca" },
