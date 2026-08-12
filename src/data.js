@@ -19,7 +19,7 @@ export const DATA = {
     { code: "BGA5",    name: "AZUL ABAETÉ Metálico",    hex: "#2E4A6B" },
     { code: "BGA9",    name: "AZUL PROFUNDO Metálico",  hex: "#1E3050" },
     { code: "BGW2/W3", name: "BRANCO POLAR",            hex: "#EEF1F2" },
-    { code: "BGC5",    name: "CINZA BARILOCHE",         hex: "#9A9A95" },
+    { code: "BGC5",    name: "CINZA BARILOCHE",         hex: "#9A9A95", photo: "1971-dodge-dart-cinza-bariloche.jpg", photoCaption: "1971 Dodge Dart Cinza Bariloche" },
     { code: "BGV6",    name: "OLIVA D'OIRO",            hex: "#7A6E2A" },
     { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E", video: "xFf2uzChpTY" },
     { code: "BGP9",    name: "PRETO FORMAL",            hex: "#1A1A1A", photo: "1971-dodge-dart-super-standard-preto-formal.jpg", photoCaption: "1971 Dodge Dart Super Standard Preto Formal" },
