@@ -28,7 +28,7 @@ export const DATA = {
     { code: "BGV4",    name: "VERDE MINUANO",           hex: "#4A6B45" },
     { code: "BGV2",    name: "VERDE TROPICAL",          hex: "#A6D24F", models: ["Charger R/T"], photo: "1971-dodge-charger-rt-verde-tropical.jpg", photoCaption: "1971 Dodge Charger R/T Verde Tropical" },
     { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#C82822", video: ["6EFT2-Vs29w", "pVwBfcKvEpU"] },
-    { code: "BGR6",    name: "VERMELHO XAVANTE",        hex: "#7A1D2A" },
+    { code: "BGR6",    name: "VERMELHO XAVANTE",        hex: "#B02824", photo: ["1971-dodge-charger-rt-vermelho-xavante-front.jpg", "1971-dodge-charger-rt-vermelho-xavante-rear.jpg"], photoCaption: "1971 Dodge Charger R/T Vermelho Xavante" },
   ],
   1972: [
     { code: "Y5",  name: "AMARELO BOREAL",            hex: "#DE5C1E" },
