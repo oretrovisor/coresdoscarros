@@ -91,7 +91,7 @@ export const DATA = {
     { code: "LT2", name: "CASTANHO CORSA",            hex: "#C97632", video: "vawQ64D4kvo", photo: "1975-dodge-charger-rt-castanho-corsa.jpg", photoCaption: "1975 Dodge Charger R/T Castanho Corsa" },
     { code: "LT9", name: "MARROM CLÁSSICO",           hex: "#5A3A26" },
     { code: "LS2", name: "PRATA LUNAR",               hex: "#B8B5AD" },
-    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "JPE7EeCHWWY" },
+    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A", video: "JPE7EeCHWWY", photo: ["1975-dodge-charger-rt-preto-baixo-brilho-front.jpg", "1975-dodge-charger-rt-preto-baixo-brilho-rear.jpg"], photoCaption: "1975 Dodge Charger R/T Preto Baixo Brilho / Ônix" },
     { code: "LF2", name: "VERDE AUSTRÍACO",           hex: "#2F4A35", unconfirmed: true },
     { code: "LG4", name: "VERDE PINHO",               hex: "#2F4A32", video: "2w48N7qHevc" },
     { code: "LR7", name: "VERMELHO AZTECA",           hex: "#711E2A", video: "a4cbli2ObYU", photo: ["1975-dodge-charger-rt-vermelho-azteca-front.jpg", "1975-dodge-charger-rt-vermelho-azteca-rear.jpg"], photoCaption: "1975 Dodge Charger R/T Vermelho Azteca" },
@@ -100,7 +100,7 @@ export const DATA = {
   1976: [
     { code: "MY2", name: "AMARELO TENERIFE",          hex: "#E8B842" },
     { code: "LW2", name: "BRANCO VALENCIA",           hex: "#F3EFE6" },
-    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#6A4527", video: "xp5ZzUB7w74" },
+    { code: "MY6", name: "CASTANHO ARAGUAIA",         hex: "#AF9440", video: "xp5ZzUB7w74", photo: "1976-dodge-charger-rt-castanho-araguaia.jpg", photoCaption: "1976 Dodge Charger R/T Castanho Araguaia" },
     { code: "MY9", name: "MARROM IGUAÇU",             hex: "#5A3A26" },
     { code: "MA2", name: "PRATA MONTEREY",            hex: "#B8B5AD" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",   hex: "#1A1A1A" },
