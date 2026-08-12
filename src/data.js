@@ -137,7 +137,7 @@ export const DATA = {
     { code: "SW1", name: "BRANCO ÁRTICO",                        hex: "#F1EDE4" },
     { code: "SA2", name: "CINZA BÁLTICO",                        hex: "#8E8E8A" },
     { code: "PR1", name: "CINZA BÁLTICO / PRETO BAIXO BRILHO",   hex: "#8E8E8A", hex2: "#1A1A1A", models: ["Magnum", "Charger R/T"] },
-    { code: "ST5", name: "MARROM SUMATRA",                       hex: "#B0693A", video: "ipODYYRq0js", photo: "1979-dodge-magnum-marrom-sumatra.jpg", photoCaption: "1979 Dodge Magnum Marrom Sumatra" },
+    { code: "ST5", name: "MARROM SUMATRA",                       hex: "#B0693A", video: ["ipODYYRq0js", "QUFs2KWeWvU"], photo: "1979-dodge-magnum-marrom-sumatra.jpg", photoCaption: "1979 Dodge Magnum Marrom Sumatra" },
     { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#B0693A", hex2: "#D7C39A", models: ["Magnum", "Charger R/T"], photo: "1979-dodge-charger-rt-marrom-sumatra-bege-cashmere.jpg", photoCaption: "1979 Dodge Charger R/T Marrom Sumatra / Bege Cashmere" },
     { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A" },
     { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22", video: "IdcdeJt9ZcY" },
