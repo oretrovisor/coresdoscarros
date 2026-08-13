@@ -43,10 +43,12 @@ export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(initial.index);
   const [toastMsg, setToastMsg] = useState(null);
 
-  // Year change from UI: reset color to first entry.
+  // Year change from UI: jump to a random color in the new year, so views
+  // spread across the palette instead of piling up on the first entry.
   const setYear = useCallback((y) => {
     setYearState(y);
-    setSelectedIndex(0);
+    const list = DATA[y] || [];
+    setSelectedIndex(list.length ? Math.floor(Math.random() * list.length) : 0);
   }, []);
 
   const colors = useMemo(() => DATA[year] || [], [year]);
