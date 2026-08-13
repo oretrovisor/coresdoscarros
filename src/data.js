@@ -54,7 +54,7 @@ export const DATA = {
     { code: "Y8A", name: "AMARELO ENXOFRE CÍTRICO",   hex: "#F0D42A" },
     { code: "A6A", name: "AZUL GUAÍBA",               hex: "#3A6F95" },
     { code: "W2",  name: "BRANCO ESPUMA MARINHA",     hex: "#E5ECF2", video: "Dtfr6xtnsYU" },
-    { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4" },
+    { code: "W2",  name: "BRANCO IPANEMA",            hex: "#F1EDE4", video: "9PuVLRZXgNs" },
     { code: "C4A", name: "CINZA HIMALAIA",            hex: "#A8ACAB", video: ["LVAB9Rt4kN8", "BbQs44QpJI0"], photo: "1973-dodge-dart-coupe-cinza-himalaia.jpg", photoCaption: "1973 Dodge Dart Coupé Cinza Himalaia" },
     { code: "C7",  name: "CINZA ESCURO",              hex: "#5A5A56" },
     { code: "M4",  name: "MARROM AZTECA",             hex: "#B8A47A", video: ["ACq7oZfg0mQ", "J69gIkxZ8EY"], photo: ["1973-dodge-charger-rt-marrom-azteca-front.jpg", "1973-dodge-charger-rt-marrom-azteca-rear.jpg"], photoCaption: "1973 Dodge Charger R/T Marrom Azteca" },
