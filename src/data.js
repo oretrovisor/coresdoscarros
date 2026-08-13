@@ -14,7 +14,7 @@ export const DATA = {
     { code: "BEV7", name: "VERDE IMPERIAL",        hex: "#3D5E44", video: "KtUNxnks-f8", photo: "1970-dodge-dart-seda-verde-imperial.jpg", photoCaption: "1970 Dodge Dart Sedã Verde Imperial" },
   ],
   1971: [
-    { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#DE5C1E", models: ["Charger R/T"], video: "J5uxLHuhZQo", photo: ["1971-dodge-charger-rt-amarelo-boreal-front.jpg", "1971-dodge-charger-rt-amarelo-boreal-rear.jpg"], photoCaption: "1971 Dodge Charger R/T Amarelo Boreal" },
+    { code: "BGY5",    name: "AMARELO BOREAL",          hex: "#DE5C1E", models: ["Charger R/T"], video: ["J5uxLHuhZQo", "3Hdo3sWUqnM"], photo: ["1971-dodge-charger-rt-amarelo-boreal-front.jpg", "1971-dodge-charger-rt-amarelo-boreal-rear.jpg"], photoCaption: "1971 Dodge Charger R/T Amarelo Boreal" },
     { code: "BGY6",    name: "AMARELO CARAJÁ",          hex: "#F4E99C" },
     { code: "BGA5",    name: "AZUL ABAETÉ Metálico",    hex: "#2E4A6B" },
     { code: "BGA9",    name: "AZUL PROFUNDO Metálico",  hex: "#1E3050" },
@@ -60,7 +60,7 @@ export const DATA = {
     { code: "M4",  name: "MARROM AZTECA",             hex: "#B8A47A", video: ["ACq7oZfg0mQ", "J69gIkxZ8EY"], photo: ["1973-dodge-charger-rt-marrom-azteca-front.jpg", "1973-dodge-charger-rt-marrom-azteca-rear.jpg"], photoCaption: "1973 Dodge Charger R/T Marrom Azteca" },
     { code: "M8",  name: "MARROM ESCURO PILÃO",       hex: "#4A2E1E" },
     { code: "P9A", name: "PRETO TURANDOT",            hex: "#1A1A1A" },
-    { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E", video: "76FRewBrnOE" },
+    { code: "V6",  name: "TURQUESA AQUARIO",          hex: "#2E8A8E", video: ["76FRewBrnOE", "Ar16ZYUUyCQ"] },
     { code: "G4",  name: "VERDE FLORESTA",            hex: "#B0D63A", video: ["cJNf9qjSSqw", "BbQs44QpJI0"], photo: "1973-dodge-dart-se-verde-floresta.jpg", photoCaption: "1973 Dodge Dart SE Verde Floresta" },
     { code: "G5",  name: "VERDE MEDIO AMAZONAS",      hex: "#356B48" },
     { code: "R4A", name: "VERMELHO CLARO / INDIO",    hex: "#CC2A22", video: "J69gIkxZ8EY", photo: "1973-dodge-charger-rt-vermelho-indio.jpg", photoCaption: "1973 Dodge Charger R/T Vermelho Índio" },
@@ -139,7 +139,7 @@ export const DATA = {
     { code: "PR1", name: "CINZA BÁLTICO / PRETO BAIXO BRILHO",   hex: "#8E8E8A", hex2: "#1A1A1A", models: ["Magnum", "Charger R/T"] },
     { code: "ST5", name: "MARROM SUMATRA",                       hex: "#B0693A", video: ["ipODYYRq0js", "QUFs2KWeWvU"], photo: "1979-dodge-magnum-marrom-sumatra.jpg", photoCaption: "1979 Dodge Magnum Marrom Sumatra" },
     { code: "MA1", name: "MARROM SUMATRA / BEGE CASHMERE",       hex: "#B0693A", hex2: "#D7C39A", models: ["Magnum", "Charger R/T"], photo: "1979-dodge-charger-rt-marrom-sumatra-bege-cashmere.jpg", photoCaption: "1979 Dodge Charger R/T Marrom Sumatra / Bege Cashmere" },
-    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A" },
+    { code: "LX9", name: "PRETO BAIXO BRILHO/ONIX",             hex: "#1A1A1A", video: "iU5S420TS94" },
     { code: "SR5", name: "VERMELHO ALCAZAR",                     hex: "#8C1E22", video: "IdcdeJt9ZcY" },
   ],
   1980: [
@@ -152,7 +152,7 @@ export const DATA = {
     { code: "TT8",     name: "MARROM CALCUTÁ",             hex: "#5A3A26", video: "QtxteupHXT4" },
     { code: "TA3",     name: "PRATA TIBET",                hex: "#B8B5AD", video: "jOCwNCmZP0c" },
     { code: "LX9",     name: "PRETO BAIXO BRILHO/ONIX",    hex: "#1A1A1A" },
-    { code: "SR5",     name: "VERMELHO ALCAZAR",           hex: "#8C1E22", video: "T1eyDgbeNSI" },
+    { code: "SR5",     name: "VERMELHO ALCAZAR",           hex: "#8C1E22", video: ["T1eyDgbeNSI", "jKXLMjU95wM"] },
   ],
   1981: [
     { code: "L8A", name: "BEGE PALHA",                hex: "#D8C89A" },
