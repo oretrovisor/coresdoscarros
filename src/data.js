@@ -24,7 +24,7 @@ export const DATA = {
     { code: "BGY7",    name: "OURO ESPANHOL",           hex: "#C8962E", video: "xFf2uzChpTY" },
     { code: "BGP9",    name: "PRETO FORMAL",            hex: "#1A1A1A", photo: "1971-dodge-dart-super-standard-preto-formal.jpg", photoCaption: "1971 Dodge Dart Super Standard Preto Formal" },
     { code: "BGV3",    name: "VERDE FRONTEIRA",         hex: "#BFCCB7", video: ["EVbKmYGCEpc", "MnegFzdN2iQ"] },
-    { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#3D5E44", video: "l6zd6dM8lf4" },
+    { code: "BGV7",    name: "VERDE IMPERIAL",          hex: "#3D5E44", video: "l6zd6dM8lf4", photo: "1971-dodge-dart-seda-verde-imperial.jpg", photoCaption: "1971 Dodge Dart Sedã Verde Imperial" },
     { code: "BGV4",    name: "VERDE MINUANO",           hex: "#4A6B45" },
     { code: "BGV2",    name: "VERDE TROPICAL",          hex: "#A6D24F", models: ["Charger R/T"], photo: "1971-dodge-charger-rt-verde-tropical.jpg", photoCaption: "1971 Dodge Charger R/T Verde Tropical" },
     { code: "BGR4",    name: "VERMELHO ETRUSCO",        hex: "#C82822", video: ["6EFT2-Vs29w", "pVwBfcKvEpU"] },
